@@ -21,18 +21,18 @@ const Home = () => {
             </h2>
             
             <div className="hero-buttons">
-              <Link to="/signup" className="primary-btn">
+              <button className="primary-btn">
                 <span>🚀</span>
-                Start Free Trial
-              </Link>
+                <span>Start Free Trial</span>
+              </button>
               <button className="secondary-btn">
                 <span>🎥</span>
-                Watch Demo Video
+                <span>Watch Video Demo</span>
               </button>
-              <Link to="/ai-features" className="secondary-btn">
+              <button className="secondary-btn">
                 <span>🤖</span>
-                Explore AI Features
-              </Link>
+                <span>Explore AI Features</span>
+              </button>
             </div>
 
             <div className="hero-stats">
