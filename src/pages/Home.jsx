@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import NavbarHome from '../components/common/NavbarHome';
-import StructuredCoursePanel from '../features/structuredLearning/StructuredCoursePanel';
-import EngineeringMindsetPanel from '../features/engineeringMindset/EngineeringMindsetPanel';
-import StartupCoursePanel from '../features/startupSimulation/StartupCoursePanel';
+import HeroSection from '../components/landing/HeroSection';
+import HowItWorksSection from '../components/landing/HowItWorksSection';
+import FeaturedSection from '../components/landing/FeaturedSection';
+import AIToolsSection from '../components/landing/AIToolsSection';
+import PricingSection from '../components/landing/PricingSection';
+import Footer from '../components/common/Footer';
 
 const Home = () => {
   return (
@@ -11,83 +13,30 @@ const Home = () => {
       <NavbarHome />
       
       {/* Hero Section */}
-      <header className="hero-section">
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1>Transform Your Learning Journey</h1>
-            <h2>
-              Unlock your potential with AI-powered personalized education and
-              hands-on project development experience
-            </h2>
-            
-            <div className="hero-buttons">
-              <button className="primary-btn">
-                <span>🚀</span>
-                <span>Start Free Trial</span>
-              </button>
-              <button className="secondary-btn">
-                <span>🎥</span>
-                <span>Watch Video Demo</span>
-              </button>
-              <button className="secondary-btn">
-                <span>🤖</span>
-                <span>Explore AI Features</span>
-              </button>
-            </div>
+      <div id="home">
+        <HeroSection />
+      </div>
 
-            <div className="hero-stats">
-              <div className="stat-item">
-                <span className="stat-icon">👥</span>
-                <span className="stat-text">50K+ Active Learners</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-icon">📚</span>
-                <span className="stat-text">500+ Interactive Courses</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-icon">🌟</span>
-                <span className="stat-text">4.9/5 Average Rating</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-icon">🎯</span>
-                <span className="stat-text">Creating Your Own Personal Course</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-icon">💻</span>
-                <span className="stat-text">500 Real Life Interactive Coding Challenges</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-icon">🏆</span>
-                <span className="stat-text">Competitive Programming Contests 2x/Week</span>
-              </div>
-            </div>
-          </div>
+      {/* How It Works Section */}
+      <div id="how-it-works">
+        <HowItWorksSection />
+      </div>
 
-          <div className="hero-animation">
-            <div className="bird-container">
-              <div className="bird">
-                <div className="bird-body"></div>
-                <div className="bird-head"></div>
-                <div className="bird-wing-left"></div>
-                <div className="bird-wing-right"></div>
-                <div className="bird-tail"></div>
-                <div className="bird-eye"></div>
-                <div className="bird-beak"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <div id="features">
+        <FeaturedSection />
+      </div>
 
-      {/* Feature Panels */}
-      <section className="feature-panels-section">
-        <h2 className="section-title">Our Key Features</h2>
-        <div className="feature-panels-grid">
-          <StructuredCoursePanel />
-          <EngineeringMindsetPanel />
-          <StartupCoursePanel />
-        </div>
-      </section>
+      <div id="ai-tools">
+        <AIToolsSection />
+      </div>
+
+      <div id="pricing">
+        <PricingSection />
+      </div>
+
+      <div id="footer">
+        <Footer />
+      </div>
     </div>
   );
 };

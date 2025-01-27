@@ -1,0 +1,357 @@
+.pricing-section {
+  padding: 6rem 2rem;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+/* Pricing Cards */
+.pricing-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Popular Badge */
+.popular {
+  border: 2px solid var(--primary-color);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--gradient-primary);
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Card Header */
+.card-header {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.card-header h3 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.price span {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+/* Features List */
+.feature-group {
+  margin-bottom: 1.5rem;
+}
+
+.feature-group h4 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.features-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+}
+
+.features-list li svg {
+  color: var(--primary-color);
+}
+
+/* Plan Buttons */
+.plan-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.free .plan-button {
+  background: var(--gradient-secondary);
+  color: white;
+}
+
+.pro .plan-button {
+  background: var(--gradient-primary);
+  color: var(--secondary-color);
+}
+
+.premium .plan-button {
+  background: var(--gradient-secondary);
+  color: white;
+}
+
+.enterprise .plan-button {
+  background: linear-gradient(45deg, #2b486f, #1a1a1a);
+  color: white;
+}
+
+/* Compare Plans Section */
+.compare-plans {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.compare-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--primary-color);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+.compare-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(110, 237, 200, 0.2);
+}
+
+/* Comparison Table Styles */
+.comparison-table {
+  margin-top: 4rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.comparison-table h3 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table th {
+  background: var(--gradient-primary);
+  color: var(--secondary-color);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.comparison-table th:first-child {
+  width: 30%;
+}
+
+.category-header td {
+  background: var(--gradient-secondary);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+}
+
+.comparison-table tr:hover:not(.category-header) {
+  background: rgba(110, 237, 200, 0.1);
+}
+
+/* Legend Styles */
+.comparison-legend {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.comparison-legend p strong {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.comparison-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.comparison-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+.comparison-note {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Comparison Table */
+@media (max-width: 1024px) {
+  .comparison-table {
+    margin: 3rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .comparison-table h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-section {
+    padding: 4rem 1rem;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .comparison-table {
+    margin: 2rem 0.5rem;
+    padding: 1rem;
+  }
+
+  .table-container {
+    margin: -1rem;
+    padding: 1rem;
+    width: calc(100% + 2rem);
+  }
+
+  .comparison-legend ul {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Custom Scrollbar for Table Container */
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 

@@ -11,7 +11,7 @@
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
-  padding: 2rem;    /* Move padding to container level */
+  padding: 2rem;
 }
 
 /* Welcome Section */
@@ -70,9 +70,20 @@
   gap: 1rem;
 }
 
-/* Feature Panels Grid - ensure consistent width */
+/* Update feature panels section in dashboard */
+.feature-panels-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 0; /* Add vertical padding but keep horizontal at 0 */
+}
+
 .feature-panels-grid {
-  width: 100%;  /* Ensure full width */
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 /* Notifications Panel */

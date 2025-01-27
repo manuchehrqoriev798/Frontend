@@ -5,6 +5,7 @@ import ProfileOverview from '../components/dashboard/ProfileOverview';
 import StructuredCoursePanel from '../features/structuredLearning/StructuredCoursePanel';
 import EngineeringMindsetPanel from '../features/engineeringMindset/EngineeringMindsetPanel';
 import StartupCoursePanel from '../features/startupSimulation/StartupCoursePanel';
+import Footer from '../components/common/Footer';
 
 const Dashboard = () => {
   return (
@@ -34,6 +35,8 @@ const Dashboard = () => {
           </div>
         </section>
       </div>
+      
+      <Footer />
     </div>
   );
 };

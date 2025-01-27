@@ -11,6 +11,10 @@ import './styles/components/navbarDashboard.css';
 import './styles/components/navbarHome.css';
 import './styles/components/particles.css';
 import './styles/components/heroSection.css';
+import './styles/global.css';
+import './styles/theme.css';
+import './styles/components/cards.css';
+import './styles/components/footer.css';
 
 function App() {
   return (

@@ -2,10 +2,11 @@
 .feature-panels-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  max-width: 1400px;  /* Match container width */
-  margin: 0 auto;     /* Center the grid */
-  padding: 0 2rem;    /* Add consistent padding */
+  gap: 4rem;
+  width: 100%; /* Changed from 90% */
+  max-width: 1400px; /* Match container width from other sections */
+  margin: 0 auto;
+  padding: 0; /* Remove padding here since container has padding */
 }
 
 .feature-panel {
