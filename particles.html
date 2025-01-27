@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform</title>
+    <link rel="stylesheet" href="particles.css">
+</head>
+<body>
+    <!-- Canvas for particle animations -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Global animated background -->
+    <div class="global-animations">
+        <!-- Top section -->
+        <div class="animation-layer top">
+            <div class="floating-shape circle"></div>
+            <div class="floating-shape square"></div>
+            <div class="floating-shape triangle"></div>
+            <div class="floating-shape plus">+</div>
+            <div class="particle-field">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Middle section -->
+        <div class="animation-layer middle">
+            <div class="floating-shape circle"></div>
+            <div class="floating-shape square"></div>
+            <div class="floating-shape triangle"></div>
+            <div class="floating-shape plus">+</div>
+            <div class="particle-field">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Bottom section -->
+        <div class="animation-layer bottom">
+            <div class="floating-shape circle"></div>
+            <div class="floating-shape square"></div>
+            <div class="floating-shape triangle"></div>
+            <div class="floating-shape plus">+</div>
+            <div class="particle-field">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Random positioned elements -->
+        <div class="random-elements">
+            <div class="random-shape" style="top: 15%; left: 25%"></div>
+            <div class="random-shape" style="top: 45%; right: 15%"></div>
+            <div class="random-shape" style="bottom: 35%; left: 10%"></div>
+            <div class="random-shape" style="top: 75%; right: 30%"></div>
+            <div class="random-shape" style="top: 25%; right: 45%"></div>
+            <div class="random-shape" style="bottom: 15%; left: 35%"></div>
+            <div class="random-shape" style="top: 55%; left: 75%"></div>
+            <div class="random-shape" style="bottom: 45%; right: 25%"></div>
+        </div>
+
+        <!-- Additional particle fields -->
+        <div class="particle-clusters">
+            <div class="cluster" style="top: 20%; left: 20%">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="cluster" style="top: 60%; right: 30%">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="cluster" style="bottom: 25%; left: 40%">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="key-features">
+        <!-- Structured Course Banner -->
+        <div class="feature-banner structured-course">
+            <!-- Geometric Background -->
+            <div class="geometric-bg">
+                <div class="shape circle-1"></div>
+                <div class="shape circle-2"></div>
+                <div class="shape square-1"></div>
+                <div class="shape square-2"></div>
+                <div class="shape triangle-1"></div>
+                <div class="shape triangle-2"></div>
+            </div>
+
+            <!-- Particles -->
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <!-- Dot Grid -->
+            <div class="dot-grid">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="floating-element floating-plus">+</div>
+            <div class="floating-element floating-circle"></div>
+            <div class="floating-element floating-square"></div>
+
+            <!-- Wave Decoration -->
+            <div class="wave-decoration">
+                <div class="wave"></div>
+            </div>
+
+            <div class="feature-content">
+                <div class="feature-header">
+                    <div class="feature-icon">🎓</div>
+                    <h2 class="feature-title">Structured Course</h2>
+                    <p class="feature-description">Define your goals and let AI create your perfect learning path</p>
+                    <div class="duo-bird teaching">
+                        <div class="bird-body"></div>
+                        <div class="bird-wing"></div>
+                        <div class="bird-eye smart"></div>
+                        <div class="bird-beak"></div>
+                    </div>
+                </div>
+
+                <div class="feature-list-container">
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-text">AI-powered personalized course creation</span>
+                        </li>
+                        <li>
+                            <span class="feature-text">Integrated learning paths</span>
+                        </li>
+                        <li>
+                            <span class="feature-text">Custom timeline tracking</span>
+                        </li>
+                        <li>
+                            <span class="feature-text">Prerequisites assessment</span>
+                        </li>
+                        <li>
+                            <span class="feature-text">Real-time progress monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-stats">
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Active Learners</span>
+                    </div>
+                </div>
+
+                <div class="feature-buttons">
+                    <button class="primary-btn">
+                        <span class="btn-icon">📚</span>
+                        <span class="btn-text">Create Course</span>
+                    </button>
+                    <button class="secondary-btn">
+                        <span class="btn-icon">🔍</span>
+                        <span class="btn-text">Browse Courses</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Engineering Mindset Banner -->
+        <div class="feature-banner engineering-mindset">
+            <!-- Same structure with all decorative elements -->
+            <div class="geometric-bg">
+                <div class="shape circle-1"></div>
+                <div class="shape circle-2"></div>
+                <div class="shape square-1"></div>
+                <div class="shape square-2"></div>
+                <div class="shape triangle-1"></div>
+                <div class="shape triangle-2"></div>
+            </div>
+
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <div class="dot-grid">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Wave Decoration -->
+            <div class="wave-decoration">
+                <div class="wave"></div>
+            </div>
+
+            <div class="feature-content">
+                <div class="feature-header">
+                    <div class="feature-icon">🛠️</div>
+                    <h2 class="feature-title">Engineering Mindset</h2>
+                    <p class="feature-description">Solve real-world engineering challenges</p>
+                    <div class="duo-bird thinking">
+                        <div class="bird-body"></div>
+                        <div class="bird-wing"></div>
+                        <div class="bird-eye"></div>
+                        <div class="bird-beak"></div>
+                    </div>
+                </div>
+
+                <ul class="feature-list">
+                    <li>Advanced drone optimization simulations</li>
+                    <li>System architecture challenges</li>
+                    <li>Technical problem-solving</li>
+                    <li>Industry-standard projects</li>
+                    <li>Performance-based assessments</li>
+                </ul>
+
+                <div class="feature-stats">
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Practice Problems</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Industry Projects</span>
+                    </div>
+                </div>
+
+                <div class="feature-buttons">
+                    <button class="primary-btn">
+                        <span class="btn-icon">🎯</span>
+                        <span class="btn-text">Solve Problems</span>
+                    </button>
+                    <button class="secondary-btn">
+                        <span class="btn-icon">🏆</span>
+                        <span class="btn-text">Join Contests</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Startup Course Banner -->
+        <div class="feature-banner startup-course">
+            <!-- Same structure with all decorative elements -->
+            <div class="geometric-bg">
+                <div class="shape circle-1"></div>
+                <div class="shape circle-2"></div>
+                <div class="shape square-1"></div>
+                <div class="shape square-2"></div>
+                <div class="shape triangle-1"></div>
+                <div class="shape triangle-2"></div>
+            </div>
+
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <div class="dot-grid">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Wave Decoration -->
+            <div class="wave-decoration">
+                <div class="wave"></div>
+            </div>
+
+            <div class="feature-content">
+                <div class="feature-header">
+                    <div class="feature-icon">🚀</div>
+                    <h2 class="feature-title">Startup Course</h2>
+                    <p class="feature-description">Transform your ideas into reality</p>
+                    <div class="duo-bird celebrating">
+                        <div class="bird-body"></div>
+                        <div class="bird-wing"></div>
+                        <div class="bird-eye happy"></div>
+                        <div class="bird-beak"></div>
+                    </div>
+                </div>
+
+                <ul class="feature-list">
+                    <li>Business model development</li>
+                    <li>AI-powered market analysis</li>
+                    <li>MVP development frameworks</li>
+                    <li>Investor pitch preparation</li>
+                    <li>Networking opportunities</li>
+                </ul>
+
+                <div class="feature-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Active Startups</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">$10M+</span>
+                        <span class="stat-label">Funding Raised</span>
+                    </div>
+                </div>
+
+                <div class="feature-buttons">
+                    <button class="primary-btn">
+                        <span class="btn-icon">🤝</span>
+                        <span class="btn-text">Join Startup</span>
+                    </button>
+                    <button class="secondary-btn">
+                        <span class="btn-icon">💡</span>
+                        <span class="btn-text">Simulate Startup</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corner decorations with enhanced animations -->
+    <div class="corner-decorations">
+        <div class="corner top-left">
+            <div class="corner-particle"></div>
+            <div class="corner-particle"></div>
+            <div class="corner-shape"></div>
+        </div>
+        <div class="corner top-right">
+            <div class="corner-particle"></div>
+            <div class="corner-particle"></div>
+            <div class="corner-shape"></div>
+        </div>
+        <div class="corner bottom-left">
+            <div class="corner-particle"></div>
+            <div class="corner-particle"></div>
+            <div class="corner-shape"></div>
+        </div>
+        <div class="corner bottom-right">
+            <div class="corner-particle"></div>
+            <div class="corner-particle"></div>
+            <div class="corner-shape"></div>
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* Placeholder for buttons.css */
+
+/* Common Button Styles */
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  width: 120px;
+  height: 40px;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none !important;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Login button - using primary color */
+.nav-button.primary {
+  background: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 2px 4px rgba(110, 237, 200, 0.2);
+}
+
+/* Signup button - using secondary color */
+.nav-button.secondary {
+  background: var(--secondary-color);
+  color: var(--white);
+  box-shadow: 0 2px 4px rgba(43, 72, 111, 0.2);
+  display: inline-flex;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Specific hover effects for each button */
+.nav-button.primary:hover {
+  box-shadow: 0 4px 8px rgba(110, 237, 200, 0.3);
+}
+
+.nav-button.secondary:hover {
+  box-shadow: 0 4px 8px rgba(43, 72, 111, 0.3);
+}
+
+.nav-button .nav-icon {
+  font-size: 1.2rem;
+}
+
+/* Add spacing between nav buttons */
+.nav-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}

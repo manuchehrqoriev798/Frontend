@@ -1,0 +1,1501 @@
+:root {
+    --primary-color: rgb(110, 237, 200);
+    --secondary-color: rgb(43, 72, 111);
+    --white: #ffffff;
+    --gradient-primary: linear-gradient(45deg, var(--primary-color), #8eecd6);
+    --gradient-secondary: linear-gradient(45deg, var(--secondary-color), #3b5998);
+    --glow-primary: rgba(110, 237, 200, 0.4);
+    --glow-secondary: rgba(43, 72, 111, 0.3);
+}
+
+.key-features {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    z-index: 1;
+}
+
+/* Geometric shapes */
+.geometric-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.1;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    top: 10%;
+    right: 5%;
+    animation: floatShape 6s ease-in-out infinite;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-color);
+    left: 5%;
+    top: 40%;
+    transform: rotate(45deg);
+    animation: rotateShape 10s linear infinite;
+}
+
+.triangle {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 70px solid var(--primary-color);
+    right: 10%;
+    bottom: 20%;
+    animation: floatShape 8s ease-in-out infinite reverse;
+}
+
+.feature-banner {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(110, 237, 200, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    min-height: 300px;
+    max-height: 350px;
+}
+
+/* Glowing border effect */
+.feature-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    padding: 2px;
+}
+
+.feature-banner:hover::before {
+    opacity: 1;
+    animation: borderGlow 2s infinite;
+}
+
+.feature-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    gap: 1.5rem;
+    align-items: start;
+    height: 100%;
+}
+
+.feature-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.feature-description {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    opacity: 0.9;
+}
+
+/* Update list styling to single column */
+.feature-content ul {
+    display: grid;
+    grid-template-columns: 1fr;  /* Changed from repeat(2, 1fr) to 1fr */
+    gap: 0.75rem;
+    margin: 0 0 1.5rem 0;  /* Added bottom margin */
+    padding: 0;
+    list-style: none;
+    max-width: 500px;  /* Optional: limit list width */
+}
+
+.feature-content ul li {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    padding-left: 1.25rem;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: slideInList 0.5s ease forwards;
+}
+
+.feature-content ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Action section */
+.feature-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.feature-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+/* Updated button styling */
+.feature-buttons {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    z-index: 3;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px; /* More rectangular shape */
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 130px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.primary-btn {
+    background: var(--gradient-primary);
+    border: none;
+    color: var(--secondary-color);
+    box-shadow: 0 4px 15px var(--glow-primary);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Button hover effects */
+.primary-btn::before, .secondary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.primary-btn:hover::before, .secondary-btn:hover::before {
+    left: 100%;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--glow-primary);
+    animation: buttonGlow 1.5s infinite;
+}
+
+.secondary-btn:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--glow-primary);
+}
+
+/* Button icon animation */
+.btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.primary-btn:hover .btn-icon {
+    animation: iconWiggle 1s infinite;
+}
+
+.secondary-btn:hover .btn-icon {
+    animation: iconRotate 1s infinite;
+}
+
+/* New button animations */
+@keyframes buttonGlow {
+    0% {
+        box-shadow: 0 4px 15px var(--glow-primary);
+    }
+    50% {
+        box-shadow: 0 4px 25px var(--glow-primary);
+    }
+    100% {
+        box-shadow: 0 4px 15px var(--glow-primary);
+    }
+}
+
+@keyframes iconWiggle {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
+
+@keyframes iconRotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Button click effect */
+.primary-btn:active, .secondary-btn:active {
+    transform: scale(0.95);
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 768px) {
+    .feature-buttons {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 1rem;
+    }
+    
+    .primary-btn, .secondary-btn {
+        padding: 0.5rem 1rem;
+        min-width: 120px;
+    }
+}
+
+/* New animations */
+@keyframes floatShape {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rotateShape {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes slideInList {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Stats section with improved visibility */
+.feature-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 0;
+    border-top: 2px solid rgba(110, 237, 200, 0.2);
+    margin: 1rem 0;
+}
+
+.stat:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px var(--glow-primary);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .feature-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .feature-actions {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-content ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-banner {
+        max-height: none;
+        min-height: auto;
+    }
+    
+    .feature-actions {
+        flex-direction: column;
+    }
+}
+
+/* Specific banner styling */
+.structured-course {
+    border-left: 5px solid #3498db;
+}
+
+.engineering-mindset {
+    border-left: 5px solid #e74c3c;
+}
+
+.startup-course {
+    border-left: 5px solid #2ecc71;
+}
+
+/* New hover effects */
+.feature-banner:hover .feature-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.stat:hover .stat-number {
+    animation: numberPop 0.5s ease;
+}
+
+@keyframes numberPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Enhanced geometric shapes */
+.geometric-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.15;
+}
+
+.circle-1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    top: 10%;
+    right: 5%;
+    animation: floatShape 6s ease-in-out infinite;
+}
+
+.circle-2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    bottom: 20%;
+    left: 10%;
+    animation: floatShape 8s ease-in-out infinite reverse;
+}
+
+.square-1 {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    left: 5%;
+    top: 30%;
+    transform: rotate(45deg);
+    animation: rotateShape 10s linear infinite;
+}
+
+.square-2 {
+    width: 30px;
+    height: 30px;
+    background: var(--secondary-color);
+    right: 15%;
+    bottom: 25%;
+    animation: rotateAndFloat 12s ease-in-out infinite;
+}
+
+.triangle-1 {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 45px solid var(--primary-color);
+    right: 20%;
+    top: 25%;
+    animation: floatAndRotate 7s ease-in-out infinite;
+}
+
+.triangle-2 {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid var(--secondary-color);
+    left: 15%;
+    bottom: 15%;
+    animation: floatAndRotate 9s ease-in-out infinite reverse;
+}
+
+/* Enhanced content layout */
+.feature-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-header {
+    padding-right: 1rem;
+    border-right: 2px solid rgba(110, 237, 200, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: iconPulse 3s ease-in-out infinite;
+}
+
+.feature-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.feature-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    opacity: 0.9;
+}
+
+/* Enhanced list styling */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.feature-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.feature-list li:hover::before {
+    transform: translateX(5px);
+}
+
+/* New animations */
+@keyframes floatAndRotate {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(180deg);
+    }
+}
+
+@keyframes rotateAndFloat {
+    0%, 100% {
+        transform: rotate(0deg) translateY(0);
+    }
+    50% {
+        transform: rotate(180deg) translateY(-20px);
+    }
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation delays for list items */
+.feature-list li:nth-child(1) { animation-delay: 0.1s; }
+.feature-list li:nth-child(2) { animation-delay: 0.2s; }
+.feature-list li:nth-child(3) { animation-delay: 0.3s; }
+.feature-list li:nth-child(4) { animation-delay: 0.4s; }
+.feature-list li:nth-child(5) { animation-delay: 0.5s; }
+
+/* Stats section with improved visibility */
+.feature-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    border-top: 2px solid rgba(110, 237, 200, 0.2);
+    margin-top: auto;
+}
+
+.stat {
+    text-align: center;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px var(--glow-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .feature-content {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-header {
+        border-right: none;
+        border-bottom: 2px solid rgba(110, 237, 200, 0.2);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional decorative elements */
+.feature-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, transparent, var(--primary-color));
+    opacity: 0.1;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* Particle effects */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.particle:nth-child(1) { top: 20%; left: 10%; animation: particleFloat 8s infinite; }
+.particle:nth-child(2) { top: 60%; right: 15%; animation: particleFloat 12s infinite; }
+.particle:nth-child(3) { bottom: 30%; left: 20%; animation: particleFloat 10s infinite; }
+.particle:nth-child(4) { top: 40%; right: 25%; animation: particleFloat 7s infinite; }
+
+/* Enhanced geometric shapes */
+.dot-grid {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    opacity: 0.2;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    animation: dotPulse 2s infinite;
+}
+
+.dot:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.wave-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    opacity: 0.1;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    animation: waveMove 10s linear infinite;
+}
+
+/* New animations */
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+    75% {
+        transform: translate(-10px, -10px);
+    }
+}
+
+@keyframes waveMove {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.8);
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px var(--glow-primary);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--glow-primary);
+    }
+}
+
+/* Enhanced hover effects */
+.feature-banner:hover .geometric-bg .shape {
+    animation-play-state: paused;
+}
+
+.feature-banner:hover::after {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Enhanced list item animations */
+.feature-list li {
+    animation: slideIn 0.5s ease forwards, fadeIn 0.5s ease forwards;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Floating elements */
+.floating-element {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+.floating-plus {
+    font-size: 24px;
+    color: var(--primary-color);
+    animation: floatRotate 8s linear infinite;
+}
+
+.floating-circle {
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: floatBounce 6s ease-in-out infinite;
+}
+
+@keyframes floatRotate {
+    from { transform: rotate(0deg) translate(20px) rotate(0deg); }
+    to { transform: rotate(360deg) translate(20px) rotate(-360deg); }
+}
+
+@keyframes floatBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Enhanced button interactions */
+.primary-btn:hover, .secondary-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    animation: buttonShine 0.5s forwards;
+}
+
+@keyframes buttonShine {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+/* Add shimmer effect to stats */
+.stat-number {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-number::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        left: 100%;
+    }
+}
+
+/* Side decorations container */
+.key-features {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Left side decorations */
+.side-decorations-left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Right side decorations */
+.side-decorations-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Floating shapes */
+.floating-shape {
+    position: absolute;
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+}
+
+.floating-shape:hover {
+    opacity: 0.3;
+}
+
+/* Left side shapes */
+.side-decorations-left .floating-shape:nth-child(1) {
+    left: 20%;
+    top: 20%;
+    animation: floatLeft 8s infinite ease-in-out;
+}
+
+.side-decorations-left .floating-shape:nth-child(2) {
+    left: 40%;
+    top: 50%;
+    animation: floatLeft 12s infinite ease-in-out reverse;
+}
+
+.side-decorations-left .floating-shape:nth-child(3) {
+    left: 30%;
+    top: 80%;
+    animation: floatLeft 10s infinite ease-in-out;
+}
+
+/* Right side shapes */
+.side-decorations-right .floating-shape:nth-child(1) {
+    right: 20%;
+    top: 30%;
+    animation: floatRight 9s infinite ease-in-out;
+}
+
+.side-decorations-right .floating-shape:nth-child(2) {
+    right: 40%;
+    top: 60%;
+    animation: floatRight 11s infinite ease-in-out reverse;
+}
+
+.side-decorations-right .floating-shape:nth-child(3) {
+    right: 30%;
+    top: 90%;
+    animation: floatRight 13s infinite ease-in-out;
+}
+
+/* Shape styles */
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.square {
+    width: 25px;
+    height: 25px;
+    background: var(--secondary-color);
+    transform: rotate(45deg);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid var(--primary-color);
+}
+
+.plus {
+    font-size: 30px;
+    color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes floatLeft {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -20px);
+    }
+}
+
+@keyframes floatRight {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-20px, -20px);
+    }
+}
+
+/* Particles */
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.side-decorations-left .particle {
+    animation: particleFloatLeft 6s infinite;
+}
+
+.side-decorations-right .particle {
+    animation: particleFloatRight 6s infinite;
+}
+
+@keyframes particleFloatLeft {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(30px, -30px);
+    }
+}
+
+@keyframes particleFloatRight {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-30px, -30px);
+    }
+}
+
+/* Ensure panels stay above decorations */
+.feature-banner {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+    .side-decorations-left,
+    .side-decorations-right {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .side-decorations-left,
+    .side-decorations-right {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-decorations-left,
+    .side-decorations-right {
+        display: none;
+    }
+}
+
+/* Additional shape styles */
+.hexagon {
+    width: 30px;
+    height: 17.32px;
+    background: var(--primary-color);
+    position: relative;
+    transform: rotate(30deg);
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 8.66px solid var(--primary-color);
+}
+
+.hexagon:after {
+    top: 100%;
+    border-top: 8.66px solid var(--primary-color);
+}
+
+.star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--secondary-color);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.cross {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.cross:before,
+.cross:after {
+    content: '';
+    position: absolute;
+    background: var(--primary-color);
+}
+
+.cross:before {
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cross:after {
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.diamond {
+    width: 20px;
+    height: 20px;
+    background: var(--secondary-color);
+    transform: rotate(45deg);
+}
+
+/* Additional animations */
+@keyframes rotateFloat {
+    0%, 100% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    25% {
+        transform: rotate(90deg) translate(15px, -15px);
+    }
+    50% {
+        transform: rotate(180deg) translate(0, -30px);
+    }
+    75% {
+        transform: rotate(270deg) translate(-15px, -15px);
+    }
+}
+
+@keyframes pulseAndFloat {
+    0%, 100% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.2) translate(-20px, -20px);
+        opacity: 0.5;
+    }
+}
+
+@keyframes zigzag {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, -20px);
+    }
+    50% {
+        transform: translate(0, -40px);
+    }
+    75% {
+        transform: translate(-20px, -20px);
+    }
+}
+
+/* Add more shapes to side decorations */
+.side-decorations-left .floating-shape:nth-child(4) {
+    left: 15%;
+    top: 35%;
+    animation: rotateFloat 15s infinite ease-in-out;
+}
+
+.side-decorations-left .floating-shape:nth-child(5) {
+    left: 45%;
+    top: 70%;
+    animation: pulseAndFloat 12s infinite ease-in-out;
+}
+
+.side-decorations-left .floating-shape:nth-child(6) {
+    left: 25%;
+    top: 85%;
+    animation: zigzag 20s infinite ease-in-out;
+}
+
+.side-decorations-right .floating-shape:nth-child(4) {
+    right: 15%;
+    top: 15%;
+    animation: rotateFloat 18s infinite ease-in-out reverse;
+}
+
+.side-decorations-right .floating-shape:nth-child(5) {
+    right: 35%;
+    top: 45%;
+    animation: pulseAndFloat 14s infinite ease-in-out;
+}
+
+.side-decorations-right .floating-shape:nth-child(6) {
+    right: 25%;
+    top: 75%;
+    animation: zigzag 16s infinite ease-in-out reverse;
+}
+
+/* Random shape clusters */
+.shape-cluster {
+    position: absolute;
+    pointer-events: none;
+}
+
+.shape-cluster-1 {
+    left: 10%;
+    top: 40%;
+}
+
+.shape-cluster-2 {
+    right: 10%;
+    top: 60%;
+}
+
+/* Glowing effects */
+.glow-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.1;
+    background: var(--primary-color);
+    animation: glowPulse 4s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.2;
+    }
+}
+
+/* Additional particle effects */
+.particle-trail {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: particleTrail 8s infinite linear;
+}
+
+@keyframes particleTrail {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(100px, -100px) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Canvas styling */
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.99),
+        rgba(255, 255, 255, 0.95)
+    );
+}
+
+/* Ensure content stays above canvas */
+.key-features {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+/* Enhanced floating shapes */
+.floating-shape {
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+}
+
+.floating-shape:hover {
+    opacity: 0.3;
+}
+
+/* Improved shape styling */
+.floating-shape.circle,
+.floating-shape.square,
+.floating-shape.triangle {
+    filter: drop-shadow(0 0 8px rgba(110, 237, 200, 0.4));
+    backdrop-filter: blur(4px);
+}
+
+/* Add new content sections */
+.feature-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(110, 237, 200, 0.2);
+    border-bottom: 1px solid rgba(110, 237, 200, 0.2);
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-label {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.highlight-value {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+/* Testimonial section */
+.feature-testimonial {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.testimonial-content {
+    font-style: italic;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+.author-info {
+    font-size: 0.8rem;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.author-title {
+    color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+/* Duo Bird Base Styling */
+.duo-bird {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform-origin: center;
+}
+
+/* Structured Course Bird - Teaching Style */
+.structured-course .duo-bird {
+    animation: teaching 2s ease-in-out infinite;
+}
+
+.structured-course .bird-body {
+    background: #58CC02; /* Duolingo green */
+}
+
+/* Engineering Mindset Bird - Thinking Style */
+.engineering-mindset .duo-bird {
+    animation: thinking 2s ease-in-out infinite;
+}
+
+.engineering-mindset .bird-body {
+    background: #3B82F6; /* Blue shade */
+}
+
+/* Startup Course Bird - Celebrating Style */
+.startup-course .duo-bird {
+    animation: celebrating 1.5s ease-in-out infinite;
+}
+
+.startup-course .bird-body {
+    background: #EC4899; /* Pink shade */
+}
+
+/* Keep existing bird component styles */
+.bird-body {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.bird-wing {
+    width: 15px;
+    height: 20px;
+    background: inherit;
+    position: absolute;
+    right: 2px;
+    top: 12px;
+    border-radius: 50%;
+    transform-origin: left center;
+    animation: wingFlap 0.6s ease-in-out infinite;
+}
+
+.bird-eye {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.bird-beak {
+    width: 12px;
+    height: 8px;
+    background: #F49000;
+    position: absolute;
+    top: 18px;
+    left: 28px;
+    border-radius: 4px;
+    transform: rotate(10deg);
+}
+
+/* Keep existing animations */
+@keyframes teaching {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-3px) scale(1.1); }
+}
+
+@keyframes thinking {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(10deg); }
+}
+
+@keyframes celebrating {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(5deg); }
+}
+
+@keyframes wingFlap {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-20deg); }
+}
