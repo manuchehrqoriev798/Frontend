@@ -40,7 +40,7 @@ const EngineeringMindsetPanel = () => {
           <div className="feature-buttons">
             <button className="primary-btn">
               <span className="btn-icon">🎯</span>
-              <span className="btn-text">Start Challenge</span>
+              <span className="btn-text">Solve Challenge</span>
             </button>
             <button className="secondary-btn">
               <span className="btn-icon">🏆</span>
