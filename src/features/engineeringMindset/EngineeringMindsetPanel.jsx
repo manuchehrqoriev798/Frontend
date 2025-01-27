@@ -5,7 +5,7 @@ const EngineeringMindsetPanel = () => {
   return (
     <div className="panel feature-panel engineering-mindset">
       <div className="feature-content">
-        <div className="feature-main">
+        <div className="feature-content-left">
           <div className="feature-header">
             <div className="feature-icon">🧠</div>
             <h2 className="feature-title">Engineering Mindset</h2>
@@ -32,21 +32,21 @@ const EngineeringMindsetPanel = () => {
           </div>
         </div>
 
-        <div className="feature-animation">
-          <div className="engineeringMindsetAnimation">
+        <div className="feature-content-right">
+          <div className="feature-animation">
             <EngineeringMindsetAnimation />
           </div>
-        </div>
 
-        <div className="feature-buttons">
-          <button className="primary-btn">
-            <span className="btn-icon">🎯</span>
-            <span className="btn-text">Start Challenge</span>
-          </button>
-          <button className="secondary-btn">
-            <span className="btn-icon">🏆</span>
-            <span className="btn-text">Join Contests</span>
-          </button>
+          <div className="feature-buttons">
+            <button className="primary-btn">
+              <span className="btn-icon">🎯</span>
+              <span className="btn-text">Start Challenge</span>
+            </button>
+            <button className="secondary-btn">
+              <span className="btn-icon">🏆</span>
+              <span className="btn-text">Join Contests</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

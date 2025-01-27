@@ -5,7 +5,7 @@ const StructuredCoursePanel = () => {
   return (
     <div className="panel feature-panel structured-course">
       <div className="feature-content">
-        <div className="feature-main">
+        <div className="feature-content-left">
           <div className="feature-header">
             <div className="feature-icon">🎓</div>
             <h2 className="feature-title">Structured Course</h2>
@@ -32,21 +32,21 @@ const StructuredCoursePanel = () => {
           </div>
         </div>
 
-        <div className="feature-animation">
-          <div className="structuredLearningAnimation">
+        <div className="feature-content-right">
+          <div className="feature-animation">
             <StructuredLearningAnimation />
           </div>
-        </div>
 
-        <div className="feature-buttons">
-          <button className="primary-btn">
-            <span className="btn-icon">📚</span>
-            <span className="btn-text">Create Course</span>
-          </button>
-          <button className="secondary-btn">
-            <span className="btn-icon">🔍</span>
-            <span className="btn-text">View Courses</span>
-          </button>
+          <div className="feature-buttons">
+            <button className="primary-btn">
+              <span className="btn-icon">📚</span>
+              <span className="btn-text">Create Course</span>
+            </button>
+            <button className="secondary-btn">
+              <span className="btn-icon">🔍</span>
+              <span className="btn-text">View Courses</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

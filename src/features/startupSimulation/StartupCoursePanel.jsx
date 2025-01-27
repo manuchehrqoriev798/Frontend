@@ -5,7 +5,7 @@ const StartupCoursePanel = () => {
   return (
     <div className="panel feature-panel startup-course">
       <div className="feature-content">
-        <div className="feature-main">
+        <div className="feature-content-left">
           <div className="feature-header">
             <div className="feature-icon">🚀</div>
             <h2 className="feature-title">Startup Simulation</h2>
@@ -32,21 +32,21 @@ const StartupCoursePanel = () => {
           </div>
         </div>
 
-        <div className="feature-animation">
-          <div className="startupSimulationAnimation">
+        <div className="feature-content-right">
+          <div className="feature-animation">
             <StartupSimulationAnimation />
           </div>
-        </div>
 
-        <div className="feature-buttons">
-          <button className="primary-btn">
-            <span className="btn-icon">🎮</span>
-            <span className="btn-text">Start Simulation</span>
-          </button>
-          <button className="secondary-btn">
-            <span className="btn-icon">📊</span>
-            <span className="btn-text">View Results</span>
-          </button>
+          <div className="feature-buttons">
+            <button className="primary-btn">
+              <span className="btn-icon">🎮</span>
+              <span className="btn-text">Start Simulation</span>
+            </button>
+            <button className="secondary-btn">
+              <span className="btn-icon">📊</span>
+              <span className="btn-text">View Results</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
