@@ -79,15 +79,16 @@ const StructuredLearningAnimation = () => {
         // Show form and move cursor to course name input
         setFormVisible(true);
         await wait(500);
-        cursor.style.transform = 'translate(280px, 380px)';
+        cursor.style.transform = 'translate(280px, 100px)';
         await wait(500);
 
         // Type course name
         typeText('Machine Learning Fundamentals');
         await wait(2000);
 
+        await wait(500);
         // Move to create button in form
-        cursor.style.transform = 'translate(380px, 490px)';
+        cursor.style.transform = 'translate(380px, 610px)';
         await wait(500);
         // Click animation on form create button
         cursor.classList.add('clicking');
@@ -178,18 +179,50 @@ const StructuredLearningAnimation = () => {
       {/* Create Course Form */}
       <div className={`course-form ${formVisible ? 'visible' : ''}`}>
         <div className="form-header">Create New Course</div>
+        
         <div className="form-group">
           <label>Course Name</label>
           <input type="text" value={typedText} readOnly />
         </div>
+
+        <div className="form-group">
+          <label>Main Goal</label>
+          <input type="text" placeholder="e.g., Build and Deploy ML Models" readOnly />
+        </div>
+
+        <div className="form-group">
+          <label>Target Timeline</label>
+          <input type="text" placeholder="Duration" readOnly />
+        </div>
+
+        <div className="form-group">
+          <label>Prerequisites</label>
+          <div className="prerequisites-tags">
+            <span>💻 Basic Programming</span>
+            <button className="add-prerequisite">+</button>
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label>Corequisites</label>
+          <div className="corequisites-section">
+            <div className="subject-row">
+              <span>📐 Linear Algebra</span>
+              <button className="remove-subject">×</button>
+            </div>
+            <button className="add-subject">+</button>
+          </div>
+        </div>
+
         <div className="form-group">
           <label>Resources</label>
           <div className="resource-tags">
-            <span>📚 Textbooks</span>
+            <span>📚 Files </span>
             <span>🎥 Videos</span>
             <span>💻 Code Examples</span>
           </div>
         </div>
+
         <button className="create-btn">Create Course</button>
       </div>
 
