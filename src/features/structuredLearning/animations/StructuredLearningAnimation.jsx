@@ -19,6 +19,9 @@ const StructuredLearningAnimation = () => {
   const [courseFoundVisible, setCourseFoundVisible] = useState(false);
 
   const typeText = (text) => {
+    // Start with empty text
+    setTypedText('');
+    
     let currentText = '';
     const typeInterval = setInterval(() => {
       if (currentText.length < text.length) {
@@ -26,6 +29,10 @@ const StructuredLearningAnimation = () => {
         setTypedText(currentText);
       } else {
         clearInterval(typeInterval);
+        // Clear text after typing is complete
+        setTimeout(() => {
+          setTypedText('');
+        }, 1000); // Wait 1 second before clearing
       }
     }, 50);
   };
@@ -111,7 +118,6 @@ const StructuredLearningAnimation = () => {
         // Move to View Courses button
         cursor.style.transform = 'translate(660px, 720px)';
         await wait(1000);
-
         // Click animation on View Courses button
         cursor.classList.add('clicking');
         await wait(500);
@@ -248,7 +254,7 @@ const StructuredLearningAnimation = () => {
             <div className="course-grid">
               <div className="course-card">
                 <div className="course-icon">🤖</div>
-                <h3>Machine Learning Fundamentals</h3>
+                <h3> Machine Learning Fundamentals </h3>
                 <p>Learn the basics of ML algorithms and implementations</p>
                 <div className="course-meta">
                   <span>📚 12 Lessons</span>
