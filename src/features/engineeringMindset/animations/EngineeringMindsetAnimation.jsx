@@ -5,6 +5,10 @@ import ReactConfetti from 'react-confetti';
 const EngineeringMindsetAnimation = () => {
   const cursorRef = useRef(null);
   const containerRef = useRef(null);
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined
+  });
   const [formVisible, setFormVisible] = useState(false);
   const [successVisible, setSuccessVisible] = useState(false);
   const [typedText, setTypedText] = useState('');
@@ -67,7 +71,7 @@ const EngineeringMindsetAnimation = () => {
         await wait(500);
 
         // Move to "Start Challenge" button on problem card
-        cursor.style.transform = 'translate(280px, 590px)';
+        cursor.style.transform = 'translate(220px, 600px)';
         await wait(1000);
         cursor.classList.add('clicking');
         await wait(500);
@@ -110,7 +114,7 @@ const EngineeringMindsetAnimation = () => {
         await wait(1000);
 
         // Move to Register Now button
-        cursor.style.transform = 'translate(280px, 460px)';
+        cursor.style.transform = 'translate(230px, 455px)';
         await wait(1000);
         cursor.classList.add('clicking');
         await wait(500);
@@ -134,15 +138,32 @@ const EngineeringMindsetAnimation = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const container = containerRef.current;
+    const updateWindowSize = () => {
+      setWindowSize({
+        width: container?.offsetWidth || 0,
+        height: container?.offsetHeight || 0
+      });
+    };
+    updateWindowSize();
+    window.addEventListener('resize', updateWindowSize);
+    return () => window.removeEventListener('resize', updateWindowSize);
+  }, []);
+
   return (
     <div ref={containerRef} className="animation-container">
       {showConfetti && (
         <ReactConfetti
-          width={containerRef.current?.offsetWidth}
-          height={containerRef.current?.offsetHeight}
+          width={windowSize.width}
+          height={windowSize.height}
           recycle={false}
           numberOfPieces={200}
           gravity={0.2}
+          style={{
+            position: 'absolute',
+            pointerEvents: 'none'
+          }}
         />
       )}
       <div ref={cursorRef} className="cursor">

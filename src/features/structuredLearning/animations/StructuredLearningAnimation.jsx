@@ -176,6 +176,10 @@ const StructuredLearningAnimation = () => {
           recycle={false}
           numberOfPieces={200}
           gravity={0.2}
+          style={{
+            position: 'absolute',
+            pointerEvents: 'none'
+          }}
         />
       )}
       <div ref={cursorRef} className="cursor">
