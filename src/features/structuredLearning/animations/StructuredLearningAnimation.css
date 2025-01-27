@@ -282,3 +282,125 @@
   from, to { border-color: transparent }
   50% { border-color: #000 }
 }
+
+.search-course {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.search-course.visible {
+  opacity: 1;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-header h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.search-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.search-bar {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 2px solid rgba(110, 237, 200, 0.3);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: rgba(110, 237, 200, 0.8);
+}
+
+.results-header {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.course-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(110, 237, 200, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(110, 237, 200, 0.2);
+  border-color: rgba(110, 237, 200, 0.4);
+}
+
+.course-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.course-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
