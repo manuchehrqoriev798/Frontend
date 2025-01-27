@@ -39,12 +39,12 @@ const StartupCoursePanel = () => {
 
           <div className="feature-buttons">
             <button className="primary-btn">
-              <span className="btn-icon">🎮</span>
-              <span className="btn-text">Start Simulation</span>
+              <span className="btn-icon">🎯</span>
+              <span className="btn-text">Start Startup</span>
             </button>
             <button className="secondary-btn">
-              <span className="btn-icon">📊</span>
-              <span className="btn-text">View Results</span>
+              <span className="btn-icon">🤝</span>
+              <span className="btn-text">Join Startup</span>
             </button>
           </div>
         </div>
