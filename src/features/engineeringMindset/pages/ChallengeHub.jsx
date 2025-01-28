@@ -291,101 +291,77 @@ const ChallengeHub = () => {
             </div>
             <div className="filters-container-engineering-challenge">
               <div className="filter-group-engineering-challenge">
-                <div className="filter-select-wrapper-engineering-challenge">
-                  <select className="filter-select-engineering-challenge">
-                    <option value="">Status</option>
-                    <option value="solved">Solved</option>
-                    <option value="unsolved">Unsolved</option>
-                    <option value="attempted">Attempted</option>
-                  </select>
-                  <span className="select-arrow-engineering-challenge">▾</span>
-                </div>
+                <select className="filter-select-engineering-challenge">
+                  <option value="">Status</option>
+                  <option value="solved">Solved</option>
+                  <option value="unsolved">Unsolved</option>
+                  <option value="attempted">Attempted</option>
+                </select>
               </div>
               <div className="filter-group-engineering-challenge">
-                <div className="filter-select-wrapper-engineering-challenge">
-                  <select className="filter-select-engineering-challenge">
-                    <option value="">Difficulty</option>
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                  </select>
-                  <span className="select-arrow-engineering-challenge">▾</span>
-                </div>
+                <select className="filter-select-engineering-challenge">
+                  <option value="">Difficulty</option>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
               </div>
               <div className="filter-group-engineering-challenge">
-                <div className="filter-select-wrapper-engineering-challenge">
-                  <select className="filter-select-engineering-challenge">
-                    <option value="">Category</option>
-                    <option value="arrays">Arrays</option>
-                    <option value="strings">Strings</option>
-                    <option value="linked-lists">Linked Lists</option>
-                    <option value="trees">Trees</option>
-                    <option value="graphs">Graphs</option>
-                  </select>
-                  <span className="select-arrow-engineering-challenge">▾</span>
-                </div>
+                <select className="filter-select-engineering-challenge">
+                  <option value="">Category</option>
+                  <option value="arrays">Arrays</option>
+                  <option value="strings">Strings</option>
+                  <option value="linked-lists">Linked Lists</option>
+                  <option value="trees">Trees</option>
+                  <option value="graphs">Graphs</option>
+                </select>
               </div>
               <div className="filter-group-engineering-challenge">
-                <div className="filter-select-wrapper-engineering-challenge">
-                  <select className="filter-select-engineering-challenge">
-                    <option value="">Topic</option>
-                    {categories.map(cat => (
-                      <option key={cat.id} value={cat.id}>{cat.name}</option>
-                    ))}
-                  </select>
-                  <span className="select-arrow-engineering-challenge">▾</span>
-                </div>
+                <select className="filter-select-engineering-challenge">
+                  <option value="">Topic</option>
+                  {categories.map(cat => (
+                    <option key={cat.id} value={cat.id}>{cat.name}</option>
+                  ))}
+                </select>
               </div>
               <div className="filter-group-engineering-challenge">
-                <div className="filter-select-wrapper-engineering-challenge">
-                  <select className="filter-select-engineering-challenge">
-                    <option value="">Companies</option>
-                    <option value="google">Google</option>
-                    <option value="amazon">Amazon</option>
-                    <option value="microsoft">Microsoft</option>
-                    <option value="meta">Meta</option>
-                  </select>
-                  <span className="select-arrow-engineering-challenge">▾</span>
-                </div>
+                <select className="filter-select-engineering-challenge">
+                  <option value="">Companies</option>
+                  <option value="google">Google</option>
+                  <option value="amazon">Amazon</option>
+                  <option value="microsoft">Microsoft</option>
+                  <option value="meta">Meta</option>
+                </select>
               </div>
               <div className="filter-group-engineering-challenge">
-                <div className="filter-select-wrapper-engineering-challenge">
-                  <select className="filter-select-engineering-challenge">
-                    <option value="">Acceptance Rate</option>
-                    <option value="high">High (&gt;70%)</option>
-                    <option value="medium">Medium (30-70%)</option>
-                    <option value="low">Low (&lt;30%)</option>
-                  </select>
-                  <span className="select-arrow-engineering-challenge">▾</span>
-                </div>
+                <select className="filter-select-engineering-challenge">
+                  <option value="">Acceptance Rate</option>
+                  <option value="high">High (&gt;70%)</option>
+                  <option value="medium">Medium (30-70%)</option>
+                  <option value="low">Low (&lt;30%)</option>
+                </select>
               </div>
               <div className="filter-group-engineering-challenge">
-                <div className="filter-select-wrapper-engineering-challenge">
-                  <select className="filter-select-engineering-challenge">
-                    <option value="">Frequency</option>
-                    <option value="most-asked">Most Asked</option>
-                    <option value="recently-added">Recently Added</option>
-                    <option value="trending">Trending</option>
-                    <option value="most-solved">Most Solved</option>
-                    <option value="least-solved">Least Solved</option>
-                  </select>
-                  <span className="select-arrow-engineering-challenge">▾</span>
-                </div>
+                <select className="filter-select-engineering-challenge">
+                  <option value="">Frequency</option>
+                  <option value="most-asked">Most Asked</option>
+                  <option value="recently-added">Recently Added</option>
+                  <option value="trending">Trending</option>
+                  <option value="most-solved">Most Solved</option>
+                  <option value="least-solved">Least Solved</option>
+                </select>
               </div>
               <div className="filter-group-engineering-challenge">
-                <div className="filter-select-wrapper-engineering-challenge">
-                  <select 
-                    className="filter-select-engineering-challenge"
-                    value={likeRatioFilter}
-                    onChange={(e) => setLikeRatioFilter(e.target.value)}
-                  >
-                    <option value="">Like Ratio</option>
-                    <option value="high">Highly Liked (≥80%)</option>
-                    <option value="medium">Moderately Liked (50-79%)</option>
-                    <option value="low">Less Liked (&lt;50%)</option>
-                  </select>
-                  <span className="select-arrow-engineering-challenge">▾</span>
-                </div>
+                <select 
+                  className="filter-select-engineering-challenge"
+                  value={likeRatioFilter}
+                  onChange={(e) => setLikeRatioFilter(e.target.value)}
+                >
+                  <option value="">Like Ratio</option>
+                  <option value="high">Highly Liked (≥80%)</option>
+                  <option value="medium">Moderately Liked (50-79%)</option>
+                  <option value="low">Less Liked (&lt;50%)</option>
+                </select>
               </div>
             </div>
           </section>
@@ -428,7 +404,7 @@ const ChallengeHub = () => {
                         <span>{challenge.points} points</span>
                         <span>👥 {challenge.completions} solved</span>
                         <span className="acceptance-rate-engineering-challenge">
-                          {challenge.acceptanceRate.toFixed(1)}% acceptance
+                          {challenge.acceptanceRate}% acceptance
                         </span>
                         <div className="likes-container-engineering-challenge">
                           <span className="likes-engineering-challenge">
