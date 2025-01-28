@@ -1,7 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import EngineeringMindsetAnimation from './animations/EngineeringMindsetAnimation';
 
 const EngineeringMindsetPanel = () => {
+  const navigate = useNavigate();
+
+  const handleSolveChallenge = () => {
+    navigate('/challenge-hub');
+  };
+
+  const handleJoinContests = () => {
+    navigate('/join-contests');
+  };
+
   return (
     <div className="panel feature-panel engineering-mindset">
       <div className="feature-content">
@@ -38,11 +49,11 @@ const EngineeringMindsetPanel = () => {
           </div>
 
           <div className="feature-buttons">
-            <button className="primary-btn">
+            <button className="primary-btn" onClick={handleSolveChallenge}>
               <span className="btn-icon">🎯</span>
               <span className="btn-text">Solve Challenge</span>
             </button>
-            <button className="secondary-btn">
+            <button className="secondary-btn" onClick={handleJoinContests}>
               <span className="btn-icon">🏆</span>
               <span className="btn-text">Join Contests</span>
             </button>

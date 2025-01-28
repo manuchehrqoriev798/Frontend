@@ -1,7 +1,18 @@
 import React from 'react';
 import StructuredLearningAnimation from './animations/StructuredLearningAnimation';
+import { useNavigate } from 'react-router-dom';
 
 const StructuredCoursePanel = () => {
+  const navigate = useNavigate();
+
+  const handleCreateCourse = () => {
+    navigate('/create-course');
+  };
+
+  const handleViewCourses = () => {
+    navigate('/course-catalog');
+  };
+
   return (
     <div className="panel feature-panel structured-course">
       <div className="feature-content">
@@ -38,11 +49,11 @@ const StructuredCoursePanel = () => {
           </div>
 
           <div className="feature-buttons">
-            <button className="primary-btn">
+            <button className="primary-btn" onClick={handleCreateCourse}>
               <span className="btn-icon">📚</span>
               <span className="btn-text">Create Course</span>
             </button>
-            <button className="secondary-btn">
+            <button className="secondary-btn" onClick={handleViewCourses}>
               <span className="btn-icon">🔍</span>
               <span className="btn-text">View Courses</span>
             </button>

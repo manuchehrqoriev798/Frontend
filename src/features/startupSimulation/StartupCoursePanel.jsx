@@ -1,7 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import StartupSimulationAnimation from './animations/StartupSimulationAnimation';
 
 const StartupCoursePanel = () => {
+  const navigate = useNavigate();
+
+  const handleStartStartup = () => {
+    navigate('/create-startup');
+  };
+
+  const handleJoinStartup = () => {
+    navigate('/startup-hub');
+  };
+
   return (
     <div className="panel feature-panel startup-course">
       <div className="feature-content">
@@ -38,11 +49,11 @@ const StartupCoursePanel = () => {
           </div>
 
           <div className="feature-buttons">
-            <button className="primary-btn">
+            <button className="primary-btn" onClick={handleStartStartup}>
               <span className="btn-icon">🎯</span>
               <span className="btn-text">Start Startup</span>
             </button>
-            <button className="secondary-btn">
+            <button className="secondary-btn" onClick={handleJoinStartup}>
               <span className="btn-icon">🤝</span>
               <span className="btn-text">Join Startup</span>
             </button>

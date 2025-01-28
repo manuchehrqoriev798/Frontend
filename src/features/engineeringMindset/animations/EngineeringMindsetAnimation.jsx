@@ -152,7 +152,7 @@ const EngineeringMindsetAnimation = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="animation-container">
+    <div ref={containerRef} className="animation-container-engineering-animation">
       {showConfetti && (
         <ReactConfetti
           width={windowSize.width}
@@ -166,31 +166,31 @@ const EngineeringMindsetAnimation = () => {
           }}
         />
       )}
-      <div ref={cursorRef} className="cursor">
-        <div className="cursor-pointer"></div>
+      <div ref={cursorRef} className="cursor-engineering-animation">
+        <div className="cursor-pointer-engineering-animation"></div>
       </div>
 
       {/* Search Problems Interface */}
-      <div className={`search-problems ${searchVisible ? 'visible' : ''}`}>
-        <div className="search-header">
+      <div className={`search-problems-engineering-animation ${searchVisible ? 'visible' : ''}`}>
+        <div className="search-header-engineering-animation">
           <h2>Engineering Challenges</h2>
           <p>Real-world problems for real-world engineers</p>
         </div>
 
         {/* Study Plans Section */}
-        <div className="study-plans-section">
-          <div className="study-plans-list">
-            <div className="study-plan-item">
+        <div className="study-plans-section-engineering-animation">
+          <div className="study-plans-list-engineering-animation">
+            <div className="study-plan-item-engineering-animation">
               <h3>Top Interview 150</h3>
               <p>Must-do List for Interview Prep challenges</p>
             </div>
 
-            <div className="study-plan-item">
+            <div className="study-plan-item-engineering-animation">
               <h3>QuadCode 75</h3>
               <p>Ace Coding Interview with 75 challenges</p>
             </div>
 
-            <div className="study-plan-item">
+            <div className="study-plan-item-engineering-animation">
               <h3>JavaScript 30</h3>
               <p>Learn JS Basics with 30 Challenges</p>
             </div>
@@ -198,9 +198,9 @@ const EngineeringMindsetAnimation = () => {
         </div>
 
         {/* Filter Section */}
-        <div className="filter-container">
-          <div className="filter-group">
-            <select className="filter-select">
+        <div className="filter-container-engineering-animation">
+          <div className="filter-group-engineering-animation">
+            <select className="filter-select-engineering-animation">
               <option value="">Topic</option>
               <option value="algorithms">Algorithms</option>
               <option value="system-design">System Design</option>
@@ -208,22 +208,22 @@ const EngineeringMindsetAnimation = () => {
               <option value="machine-learning">Machine Learning</option>
             </select>
 
-            <select className="filter-select">
+            <select className="filter-select-engineering-animation">
               <option value="">Status</option>
               <option value="not-attempted">Not Attempted</option>
               <option value="in-progress">In Progress</option>
               <option value="completed">Completed</option>
             </select>
 
-            <select className="filter-select">
+            <select className="filter-select-engineering-animation">
               <option value="">Difficulty</option>
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
 
-            <div className="compact-search">
-              <span className="search-icon">🔍</span>
+            <div className="compact-search-engineering-animation">
+              <span className="search-icon-engineering-animation">🔍</span>
               <input 
                 type="text" 
                 value={typedText} 
@@ -236,43 +236,43 @@ const EngineeringMindsetAnimation = () => {
 
         {/* Challenge Grid */}
         {coursesVisible && (
-          <div className="problems-grid">
-            <div className="problem-card featured">
-              <div className="problem-header">
-                <span className="problem-icon">🚁</span>
-                <span className="difficulty-badge advanced">Advanced</span>
+          <div className="problems-grid-engineering-animation">
+            <div className="problem-card-engineering-animation featured">
+              <div className="problem-header-engineering-animation">
+                <span className="problem-icon-engineering-animation">🚁</span>
+                <span className="difficulty-badge-engineering-animation advanced">Advanced</span>
               </div>
               <h3>Drone Delivery System</h3>
               <p>Design an efficient drone delivery system optimizing for battery life and delivery time</p>
-              <div className="problem-meta">
-                <span className="acceptance-rate">Acceptance: 65%</span>
-                <span className="submissions">12.5K submissions</span>
+              <div className="problem-meta-engineering-animation">
+                <span className="acceptance-rate-engineering-animation">Acceptance: 65%</span>
+                <span className="submissions-engineering-animation">12.5K submissions</span>
               </div>
-              <div className="problem-tags">
+              <div className="problem-tags-engineering-animation">
                 <span>Algorithms</span>
                 <span>Optimization</span>
                 <span>System Design</span>
               </div>
-              <button className="start-challenge-btn">Solve Challenge</button>
+              <button className="start-challenge-btn-engineering-animation">Solve Challenge</button>
             </div>
 
-            <div className="problem-card">
-              <div className="problem-header">
-                <span className="problem-icon">🌐</span>
-                <span className="difficulty-badge medium">Medium</span>
+            <div className="problem-card-engineering-animation">
+              <div className="problem-header-engineering-animation">
+                <span className="problem-icon-engineering-animation">🌐</span>
+                <span className="difficulty-badge-engineering-animation medium">Medium</span>
               </div>
               <h3>Social Media Feed</h3>
               <p>Build a scalable content delivery system with real-time updates</p>
-              <div className="problem-meta">
-                <span className="acceptance-rate">Acceptance: 72%</span>
-                <span className="submissions">8.3K submissions</span>
+              <div className="problem-meta-engineering-animation">
+                <span className="acceptance-rate-engineering-animation">Acceptance: 72%</span>
+                <span className="submissions-engineering-animation">8.3K submissions</span>
               </div>
-              <div className="problem-tags">
+              <div className="problem-tags-engineering-animation">
                 <span>Scaling</span>
                 <span>Real-time</span>
                 <span>Databases</span>
               </div>
-              <button className="start-challenge-btn">Solve Challenge</button>
+              <button className="start-challenge-btn-engineering-animation">Solve Challenge</button>
             </div>
    
           </div>
@@ -280,56 +280,56 @@ const EngineeringMindsetAnimation = () => {
       </div>
 
       {/* Contest Interface */}
-      <div className={`search-problems ${formVisible ? 'visible' : ''}`}>
-        <div className="search-header">
+      <div className={`search-problems-engineering-animation ${formVisible ? 'visible' : ''}`}>
+        <div className="search-header-engineering-animation">
           <h2>Engineering Contests</h2>
           <p>Compete with other engineers in real-world challenges</p>
         </div>
 
-        <div className="contest-grid">
-          <div className="contest-card active">
-            <div className="contest-status">
-              <span className="status-badge live">Live Now</span>
-              <span className="participants">👥 234 participating</span>
+        <div className="contest-grid-engineering-animation">
+          <div className="contest-card-engineering-animation active">
+            <div className="contest-status-engineering-animation">
+              <span className="status-badge-engineering-animation live">Live Now</span>
+              <span className="participants-engineering-animation">👥 234 participating</span>
             </div>
             <h3>System Design Championship</h3>
             <p>Design scalable systems for real-world scenarios</p>
-            <div className="contest-meta">
+            <div className="contest-meta-engineering-animation">
               <span>⏱️ Duration: 5 hours</span>
               <span>🌐 Open Contest</span>
             </div>
-            <button className="register-btn">Register Now</button>
+            <button className="register-btn-engineering-animation">Register Now</button>
           </div>
 
-          <div className="contest-card upcoming">
-            <div className="contest-status">
-              <span className="status-badge upcoming">Starting Soon</span>
-              <span className="participants">👥 156 registered</span>
+          <div className="contest-card-engineering-animation upcoming">
+            <div className="contest-status-engineering-animation">
+              <span className="status-badge-engineering-animation upcoming">Starting Soon</span>
+              <span className="participants-engineering-animation">👥 156 registered</span>
             </div>
             <h3>AI Engineering Challenge</h3>
             <p>Build and optimize AI models for production</p>
-            <div className="contest-meta">
+            <div className="contest-meta-engineering-animation">
               <span>⏱️ Duration: 5 hours</span>
               <span>🔒 Private Contest</span>
             </div>
-            <button className="register-btn">Register Now</button>
+            <button className="register-btn-engineering-animation">Register Now</button>
           </div>
         </div>
       </div>
 
       {/* Problem View Interface */}
-      <div className={`problem-view ${problemViewVisible ? 'visible' : ''}`}>
-        <div className="problem-description">
+      <div className={`problem-view-engineering-animation ${problemViewVisible ? 'visible' : ''}`}>
+        <div className="problem-description-engineering-animation">
           <h2>Drone Delivery System</h2>
-          <div className="difficulty-levels">
-            <div className="difficulty-level completed">Level 1</div>
-            <div className="difficulty-level active">Level 2</div>
-            <div className="difficulty-level">Level 3</div>
-            <div className="difficulty-level">Level 4</div>
-            <div className="difficulty-level">Level 5</div>
+          <div className="difficulty-levels-engineering-animation">
+            <div className="difficulty-level-engineering-animation completed">Level 1</div>
+            <div className="difficulty-level-engineering-animation active">Level 2</div>
+            <div className="difficulty-level-engineering-animation">Level 3</div>
+            <div className="difficulty-level-engineering-animation">Level 4</div>
+            <div className="difficulty-level-engineering-animation">Level 5</div>
           </div>
           
-          <div className="problem-content">
+          <div className="problem-content-engineering-animation">
             <h3>Problem Description</h3>
             <p>[Detailed description of the drone delivery system optimization problem will be displayed here]</p>
             
@@ -345,16 +345,16 @@ const EngineeringMindsetAnimation = () => {
           </div>
         </div>
 
-        <div className="code-editor">
-          <div className="editor-header">
-            <select className="language-select">
+        <div className="code-editor-engineering-animation">
+          <div className="editor-header-engineering-animation">
+            <select className="language-select-engineering-animation">
               <option value="python">Python</option>
               <option value="javascript">JavaScript</option>
               <option value="java">Java</option>
             </select>
           </div>
-          <div className="editor-content">
-            <pre className="code-area">
+          <div className="editor-content-engineering-animation">
+            <pre className="code-area-engineering-animation">
               {`def optimize_drone_delivery(drones, packages):
     # Your code here
     return {
@@ -362,21 +362,21 @@ const EngineeringMindsetAnimation = () => {
     }`}
             </pre>
           </div>
-          <div className="editor-footer">
-            <button className="run-code-btn">Run Code</button>
-            <button className="submit-code-btn">Submit Solution</button>
+          <div className="editor-footer-engineering-animation">
+            <button className="run-code-btn-engineering-animation">Run Code</button>
+            <button className="submit-code-btn-engineering-animation">Submit Solution</button>
           </div>
         </div>
       </div>
 
       {/* Success Messages */}
-      <div className={`success-message ${challengeFoundVisible ? 'visible' : ''}`}>
+      <div className={`success-message-engineering-animation ${challengeFoundVisible ? 'visible' : ''}`}>
         Great job! You've solved a real-world engineering challenge! 🎯
       </div>
-      <div className={`success-message ${successVisible ? 'visible' : ''}`}>
+      <div className={`success-message-engineering-animation ${successVisible ? 'visible' : ''}`}>
         Successfully registered for the contest! Get ready to compete! 🏆
       </div>
-      <div className={`success-message ${codeSubmitted ? 'visible' : ''}`}>
+      <div className={`success-message-engineering-animation ${codeSubmitted ? 'visible' : ''}`}>
         Congratulations! Your solution passed all test cases! 🎉
       </div>
     </div>

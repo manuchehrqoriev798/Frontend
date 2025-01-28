@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './StructuredLearningAnimation.css';
 import ReactConfetti from 'react-confetti';
+import { useNavigate } from 'react-router-dom';
 
 const StructuredLearningAnimation = () => {
   const cursorRef = useRef(null);
@@ -17,6 +18,8 @@ const StructuredLearningAnimation = () => {
   const [searchText, setSearchText] = useState('');
   const [coursesVisible, setCoursesVisible] = useState(false);
   const [courseFoundVisible, setCourseFoundVisible] = useState(false);
+  const [courseDetailsVisible, setCourseDetailsVisible] = useState(false);
+  const navigate = useNavigate();
 
   const typeText = (text) => {
     // Start with empty text
@@ -167,8 +170,12 @@ const StructuredLearningAnimation = () => {
     };
   }, []);
 
+  const handleViewCourses = () => {
+    navigate('/course-catalog');
+  };
+
   return (
-    <div ref={containerRef} className="animation-container">
+    <div ref={containerRef} className="animation-container-structured-animation">
       {showConfetti && (
         <ReactConfetti
           width={windowSize.width}
@@ -182,94 +189,94 @@ const StructuredLearningAnimation = () => {
           }}
         />
       )}
-      <div ref={cursorRef} className="cursor">
-        <div className="cursor-pointer"></div>
+      <div ref={cursorRef} className="cursor-structured-animation">
+        <div className="cursor-pointer-structured-animation"></div>
       </div>
 
       {/* Create Course Form */}
-      <div className={`course-form ${formVisible ? 'visible' : ''}`}>
-        <div className="form-header">Create New Course</div>
+      <div className={`course-form-structured-animation ${formVisible ? 'visible' : ''}`}>
+        <div className="form-header-structured-animation">Create New Course</div>
         
-        <div className="form-group">
+        <div className="form-group-structured-animation">
           <label>Course Name</label>
           <input type="text" value={typedText} readOnly />
         </div>
 
-        <div className="form-group">
+        <div className="form-group-structured-animation">
           <label>Main Goal</label>
           <input type="text" placeholder="e.g., Build and Deploy ML Models" readOnly />
         </div>
 
-        <div className="form-group">
+        <div className="form-group-structured-animation">
           <label>Target Timeline</label>
           <input type="text" placeholder="Duration" readOnly />
         </div>
 
-        <div className="form-group">
+        <div className="form-group-structured-animation">
           <label>Prerequisites</label>
-          <div className="prerequisites-tags">
+          <div className="prerequisites-tags-structured-animation">
             <span>💻 Basic Programming</span>
-            <button className="add-prerequisite">+</button>
+            <button className="add-prerequisite-structured-animation">+</button>
           </div>
         </div>
 
-        <div className="form-group">
+        <div className="form-group-structured-animation">
           <label>Corequisites</label>
-          <div className="corequisites-section">
-            <div className="subject-row">
+          <div className="corequisites-section-structured-animation">
+            <div className="subject-row-structured-animation">
               <span>📐 Linear Algebra</span>
-              <button className="remove-subject">×</button>
+              <button className="remove-subject-structured-animation">×</button>
             </div>
-            <button className="add-subject">+</button>
+            <button className="add-subject-structured-animation">+</button>
           </div>
         </div>
 
-        <div className="form-group">
+        <div className="form-group-structured-animation">
           <label>Resources</label>
-          <div className="resource-tags">
+          <div className="resource-tags-structured-animation">
             <span>📚 Files </span>
             <span>🎥 Videos</span>
             <span>💻 Code Examples</span>
           </div>
         </div>
 
-        <button className="create-btn">Create Course</button>
+        <button className="create-btn-structured-animation">Create Course</button>
       </div>
 
       {/* Success Message */}
-      <div className={`success-message ${successVisible ? 'visible' : ''}`}>
+      <div className={`success-message-structured-animation ${successVisible ? 'visible' : ''}`}>
         Course created successfully! 🎉
       </div>
 
       {/* Search Interface */}
-      <div className={`search-course ${searchVisible ? 'visible' : ''}`}>
-        <div className="search-header">
+      <div className={`search-course-structured-animation ${searchVisible ? 'visible' : ''}`}>
+        <div className="search-header-structured-animation">
           <h2>Explore Courses</h2>
           <p>Find your perfect learning path</p>
         </div>
-        <div className="search-bar">
-          <span className="search-icon">🔍</span>
+        <div className="search-structured-bar-structured-animation">
+          <span className="search-icon-structured-animation">🔍</span>
           <input type="text" value={typedText} readOnly placeholder="Search courses..." />
         </div>
         
         {coursesVisible && (
-          <div className="course-results">
-            <div className="results-header">Found 2 courses matching "Machine Learning"</div>
-            <div className="course-grid">
-              <div className="course-card">
-                <div className="course-icon">🤖</div>
+          <div className="course-results-structured-animation">
+            <div className="results-header-structured-animation">Found 2 courses matching "Machine Learning"</div>
+            <div className="course-grid-structured-animation">
+              <div className="course-card-structured-animation">
+                <div className="course-icon-structured-animation">🤖</div>
                 <h3> Machine Learning Fundamentals </h3>
                 <p>Learn the basics of ML algorithms and implementations</p>
-                <div className="course-meta">
+                <div className="course-meta-structured-animation">
                   <span>📚 12 Lessons</span>
                   <span>⏱️ 6 weeks</span>
                 </div>
               </div>
-              <div className="course-card">
-                <div className="course-icon">🧠</div>
+              <div className="course-card-structured-animation">
+                <div className="course-icon-structured-animation">🧠</div>
                 <h3>Advanced ML Techniques</h3>
                 <p>Deep learning and neural networks</p>
-                <div className="course-meta">
+                <div className="course-meta-structured-animation">
                   <span>📚 15 Lessons</span>
                   <span>⏱️ 8 weeks</span>
                 </div>
@@ -280,9 +287,32 @@ const StructuredLearningAnimation = () => {
       </div>
 
       {/* Course Found Message */}
-      <div className={`success-message ${courseFoundVisible ? 'visible' : ''}`}>
+      <div className={`success-message-structured-animation ${courseFoundVisible ? 'visible' : ''}`}>
         Course found! Ready to start learning 🚀
       </div>
+
+      {/* Course Details Section */}
+      <div className={`course-details-structured-animation ${courseDetailsVisible ? 'visible' : ''}`}>
+        <div className="course-header-structured-animation">
+          {/* header content */}
+        </div>
+        
+        <div className="course-stats-structured-animation">
+          <div className="stat-structured-animation">
+            <div className="stat-icon-structured-animation">
+              {/* icon content */}
+            </div>
+            <span className="stat-value-structured-animation">
+              {/* value content */}
+            </span>
+            <span className="stat-label-structured-animation">
+              {/* label content */}
+            </span>
+          </div>
+          {/* Additional stats follow the same pattern */}
+        </div>
+      </div>
+
     </div>
   );
 };

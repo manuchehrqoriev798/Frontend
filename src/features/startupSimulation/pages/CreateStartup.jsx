@@ -2,17 +2,17 @@ import React from 'react';
 import NavbarDashboard from '../../../components/common/NavbarDashboard';
 import Footer from '../../../components/common/Footer';
 
-const StartupHub = () => {
+const CreateStartup = () => {
   return (
-    <div className="startup-hub-container">
+    <div className="create-startup-container">
       <NavbarDashboard />
-      <main className="startup-hub-content">
-        <h1>Startup Hub</h1>
-        {/* Startup hub content will go here */}
+      <main className="create-startup-content">
+        <h1>Create Startup</h1>
+        {/* Startup creation form will go here */}
       </main>
       <Footer />
     </div>
   );
 };
 
-export default StartupHub;
+export default CreateStartup;

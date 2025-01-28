@@ -154,7 +154,7 @@ const StartupSimulationAnimation = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="animation-container">
+    <div ref={containerRef} className="animation-container-startup-animation">
       {showConfetti && (
         <ReactConfetti
           width={windowSize.width}
@@ -168,15 +168,15 @@ const StartupSimulationAnimation = () => {
           }}
         />
       )}
-      <div ref={cursorRef} className="cursor"></div>
+      <div ref={cursorRef} className="cursor-startup-animation"></div>
 
       {/* Create New Startup Form */}
-      <div className={`startup-form ${formVisible ? 'visible' : ''}`}>
-        <div className="form-header">
+      <div className={`startup-form-startup-animation ${formVisible ? 'visible' : ''}`}>
+        <div className="form-header-startup-animation">
           <h2>Create New Startup</h2>
         </div>
         
-        <div className="form-group">
+        <div className="form-group-startup-animation">
           <label>Startup Name</label>
           <input 
             type="text" 
@@ -186,28 +186,30 @@ const StartupSimulationAnimation = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className="form-group-startup-animation">
           <label>What problem are you solving?</label>
           <textarea 
             placeholder="Describe the specific problem your startup addresses..." 
             readOnly 
-            rows="3"
+            rows="2"
+            className="compact-textarea-startup-animation"
           ></textarea>
         </div>
         
-        <div className="form-group">
+        <div className="form-group-startup-animation compact">
           <label>Why does your solution work?</label>
           <textarea 
             placeholder="Explain how your solution effectively solves the problem..." 
             readOnly 
-            rows="3"
+            rows="2"
+            className="compact-textarea-startup-animation"
           ></textarea>
         </div>
 
-        <div className="form-row">
-          <div className="form-group half">
+        <div className="form-row-startup-animation">
+          <div className="form-group-startup-animation half">
             <label>Initial Budget</label>
-            <select className="form-select" defaultValue="500k">
+            <select className="form-select-startup-animation" defaultValue="500k">
               <option value="100k">$100K</option>
               <option value="500k">$500K</option>
               <option value="1m">$1M</option>
@@ -215,9 +217,9 @@ const StartupSimulationAnimation = () => {
             </select>
           </div>
           
-          <div className="form-group half">
+          <div className="form-group-startup-animation half">
             <label>Team Size</label>
-            <select className="form-select" defaultValue="small">
+            <select className="form-select-startup-animation" defaultValue="small">
               <option value="solo">Solo Founder</option>
               <option value="small">Small (2-5)</option>
               <option value="medium">Medium (6-15)</option>
@@ -226,47 +228,47 @@ const StartupSimulationAnimation = () => {
           </div>
         </div>
 
-        <div className="form-group privacy-setting">
+        <div className="form-group-startup-animation privacy-setting-startup-animation">
           <label>Privacy Setting</label>
-          <div className="privacy-options-row">
-            <label className="radio-label">
+          <div className="privacy-options-row-startup-animation">
+            <label className="radio-label-startup-animation">
               <input 
                 type="radio" 
                 name="privacy" 
                 value="public" 
                 defaultChecked 
               />
-              <span className="radio-text">
+              <span className="radio-text-startup-animation">
                 <strong>Public</strong>
               </span>
             </label>
-            <label className="radio-label">
+            <label className="radio-label-startup-animation">
               <input 
                 type="radio" 
                 name="privacy" 
                 value="private" 
               />
-              <span className="radio-text">
+              <span className="radio-text-startup-animation">
                 <strong>Private</strong>
               </span>
             </label>
           </div>
         </div>
 
-        <button className="create-btn">Create Startup</button>
+        <button className="create-btn-startup-animation">Create Startup</button>
       </div>
 
-      {/* Search Interface - Only visible after Join Startup click */}
+      {/* Search Interface */}
       {searchVisible && (
-        <div className="search-simulation visible">
-          <div className="search-header">
+        <div className="search-simulation-startup-animation visible">
+          <div className="search-header-startup-animation">
             <h2>Browse Startups</h2>
             <p>Find your startup challenge</p>
           </div>
 
-          <div className="search-filters">
-            <div className="filter-group">
-              <select className="filter-select">
+          <div className="search-filters-startup-animation">
+            <div className="filter-group-startup-animation">
+              <select className="filter-select-startup-animation">
                 <option value="">All Industries</option>
                 <option value="tech">Technology</option>
                 <option value="health">Healthcare</option>
@@ -274,14 +276,14 @@ const StartupSimulationAnimation = () => {
                 <option value="retail">Retail</option>
               </select>
 
-              <select className="filter-select">
+              <select className="filter-select-startup-animation">
                 <option value="">All Statuses</option>
                 <option value="open">Open</option>
                 <option value="private">Private</option>
                 <option value="active">Active</option>
               </select>
 
-              <select className="filter-select">
+              <select className="filter-select-startup-animation">
                 <option value="">Team Size</option>
                 <option value="small">Small (2-5)</option>
                 <option value="medium">Medium (6-15)</option>
@@ -289,38 +291,38 @@ const StartupSimulationAnimation = () => {
               </select>
             </div>
 
-            <div className="search-bar">
-              <span className="search-icon">🔍</span>
+            <div className="search-startup-bar-startup-animation">
+              <span className="search-icon-startup-animation">🔍</span>
               <input type="text" value={typedText} readOnly placeholder="Search startups..." />
             </div>
           </div>
           
           {coursesVisible && (
-            <div className="simulation-results">
-              <div className="results-header">Found 2 startups matching "Tech Startup"</div>
-              <div className="simulation-grid">
-                <div className="simulation-card public">
-                  <div className="status-badge public">Public</div>
-                  <div className="simulation-icon">🚀</div>
+            <div className="simulation-results-startup-animation">
+              <div className="results-header-startup-animation">Found 2 startups matching "Tech Startup"</div>
+              <div className="simulation-grid-startup-animation">
+                <div className="simulation-card-startup-animation public">
+                  <div className="status-badge-startup-animation public">Public</div>
+                  <div className="simulation-icon-startup-animation">🚀</div>
                   <h3>Drone Delivery Express</h3>
                   <p>Revolutionizing last-mile delivery with autonomous drones</p>
-                  <div className="simulation-meta">
+                  <div className="simulation-meta-startup-animation">
                     <span>💰 $1M Budget</span>
                     <span>👥 Team: 6-15</span>
                   </div>
-                  <button className="join-btn">Join Startup</button>
+                  <button className="join-startup-btn-startup-animation">Join Startup</button>
                 </div>
 
-                <div className="simulation-card private">
-                  <div className="status-badge private">Private</div>
-                  <div className="simulation-icon">🛸</div>
+                <div className="simulation-card-startup-animation private">
+                  <div className="status-badge-startup-animation private">Private</div>
+                  <div className="simulation-icon-startup-animation">🛸</div>
                   <h3>Sky Logistics AI</h3>
                   <p>AI-powered drone fleet management platform</p>
-                  <div className="simulation-meta">
+                  <div className="simulation-meta-startup-animation">
                     <span>💰 $500K Budget</span>
                     <span>👥 Team: 2-5</span>
                   </div>
-                  <button className="request-btn">Send Request to Join</button>
+                  <button className="request-btn-startup-animation">Send Request to Join</button>
                 </div>
               </div>
             </div>
@@ -329,10 +331,10 @@ const StartupSimulationAnimation = () => {
       )}
 
       {/* Success Messages */}
-      <div className={`success-message ${successVisible ? 'visible' : ''}`}>
+      <div className={`success-message-startup-animation ${successVisible ? 'visible' : ''}`}>
         Startup created successfully! 🚀
       </div>
-      <div className={`success-message ${courseFoundVisible ? 'visible' : ''}`}>
+      <div className={`success-message-startup-animation ${courseFoundVisible ? 'visible' : ''}`}>
         Ready to join the startup! Let's build something amazing 🚀
       </div>
     </div>
