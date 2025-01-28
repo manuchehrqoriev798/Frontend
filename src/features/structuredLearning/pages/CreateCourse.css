@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #f5f7fa 0%, rgba(110, 237, 200, 0.1) 100%);
+  background: linear-gradient(135deg, var(--background-light) 0%, rgba(var(--primary-color-rgb), 0.1) 100%);
 }
 
 .create-course-content-structured-create-course {
@@ -37,11 +37,11 @@
 .course-creation-wrapper-structured-create-course {
   width: 90%;
   margin: 0 auto;
-  background: linear-gradient(145deg, #f8fafc, rgba(43, 72, 111, 0.05));
+  background: linear-gradient(145deg, var(--background-light), rgba(var(--secondary-color-rgb), 0.05));
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border: 5px solid rgba(110, 237, 200, 0.3);
+  border: 5px solid rgba(var(--primary-color-rgb), 0.3);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px); /* For Safari support */
 }
@@ -55,7 +55,7 @@
 }
 
 .form-section-structured-create-course {
-  background: linear-gradient(145deg, #ffffff, rgba(110, 237, 200, 0.1));
+  background: linear-gradient(145deg, var(--white), rgba(var(--primary-color-rgb), 0.1));
   padding: 3rem;
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -73,7 +73,7 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, rgb(110, 237, 200), rgb(43, 72, 111));
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
 }
 
 .form-section-structured-create-course h2 {
@@ -982,23 +982,23 @@
 
 /* Custom color for specific sections */
 .form-section-structured-create-course:nth-child(1) {
-  background: linear-gradient(145deg, #ffffff, rgba(110, 237, 200, 0.1));
+  background: linear-gradient(145deg, var(--white), rgba(var(--primary-color-rgb), 0.1));
 }
 
 .form-section-structured-create-course:nth-child(2) {
-  background: linear-gradient(145deg, #ffffff, rgba(43, 72, 111, 0.05));
+  background: linear-gradient(145deg, var(--white), rgba(var(--secondary-color-rgb), 0.05));
 }
 
 .form-section-structured-create-course:nth-child(3) {
-  background: linear-gradient(145deg, rgba(110, 237, 200, 0.05), rgba(43, 72, 111, 0.02));
+  background: linear-gradient(145deg, rgba(var(--primary-color-rgb), 0.05), rgba(var(--secondary-color-rgb), 0.02));
 }
 
 .form-section-structured-create-course:nth-child(4) {
-  background: linear-gradient(145deg, rgba(43, 72, 111, 0.03), rgba(110, 237, 200, 0.08));
+  background: linear-gradient(145deg, rgba(var(--secondary-color-rgb), 0.03), rgba(var(--primary-color-rgb), 0.08));
 }
 
 .form-section-structured-create-course:nth-child(5) {
-  background: linear-gradient(145deg, rgba(110, 237, 200, 0.1), rgba(43, 72, 111, 0.04));
+  background: linear-gradient(145deg, rgba(var(--primary-color-rgb), 0.1), rgba(var(--secondary-color-rgb), 0.04));
 }
 
 /* Enhance depth with better shadows */

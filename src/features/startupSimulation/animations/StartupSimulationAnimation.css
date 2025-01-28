@@ -124,7 +124,7 @@
 
 .compact-textarea-startup-animation {
     padding: 0.8rem 1rem;
-    border: 2px solid rgba(110, 237, 200, 0.2);
+    border: 2px solid rgba(var(--primary-color-rgb), 0.2);
     border-radius: 10px;
     font-size: 0.95rem;
     line-height: 1.4;
@@ -137,15 +137,15 @@
 
 .compact-textarea-startup-animation:focus {
     outline: none;
-    border-color: rgba(110, 237, 200, 0.8);
+    border-color: rgba(var(--primary-color-rgb), 0.8);
     background: #fff;
-    box-shadow: 0 0 0 4px rgba(110, 237, 200, 0.1);
+    box-shadow: 0 0 0 4px rgba(var(--primary-color-rgb), 0.1);
 }
 
 .form-select-startup-animation {
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 2px solid rgba(110, 237, 200, 0.2);
+    border: 2px solid rgba(var(--primary-color-rgb), 0.2);
     border-radius: 10px;
     font-size: 0.95rem;
     background: #f8f9fa;
@@ -159,9 +159,9 @@
 
 .form-select-startup-animation:focus {
     outline: none;
-    border-color: rgba(110, 237, 200, 0.8);
+    border-color: rgba(var(--primary-color-rgb), 0.8);
     background-color: #fff;
-    box-shadow: 0 0 0 4px rgba(110, 237, 200, 0.1);
+    box-shadow: 0 0 0 4px rgba(var(--primary-color-rgb), 0.1);
 }
 
 /* Enhanced Search Bar */

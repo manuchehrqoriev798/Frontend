@@ -171,8 +171,8 @@
 .enroll-button-engineering-challenge {
   width: 100%;
   padding: 0.8rem;
-  background: linear-gradient(45deg, rgb(110, 237, 200), #8eecd6);
-  color: rgb(43, 72, 111);
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-color-light));
+  color: var(--secondary-color);
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -332,12 +332,12 @@
 }
 
 .tag-badge-engineering-challenge {
-  background: rgba(110, 237, 200, 0.1);
+  background: rgba(var(--primary-color-rgb), 0.1);
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.75rem;
-  color: rgb(43, 72, 111);
-  border: 1px solid rgba(110, 237, 200, 0.3);
+  color: var(--secondary-color);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
 }
 
 /* Hide the original solve button visually but keep it accessible */

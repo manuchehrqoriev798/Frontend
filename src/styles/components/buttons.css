@@ -42,11 +42,11 @@
 
 /* Specific hover effects for each button */
 .nav-button.primary:hover {
-  box-shadow: 0 4px 8px rgba(110, 237, 200, 0.3);
+  box-shadow: 0 4px 8px rgba(var(--primary-color), 0.3);
 }
 
 .nav-button.secondary:hover {
-  box-shadow: 0 4px 8px rgba(43, 72, 111, 0.3);
+  box-shadow: 0 4px 8px rgba(var(--secondary-color), 0.3);
 }
 
 .nav-button .nav-icon {

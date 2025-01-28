@@ -482,9 +482,9 @@
 
 /* Popular Courses Title */
 .popular-courses-structured-catalog h2 {
-  background: linear-gradient(135deg, #ff6b6b20, #ff6b6b10);
-  color: #ff6b6b;
-  border-left: 4px solid #ff6b6b;
+  background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.2), rgba(var(--primary-color-rgb), 0.1));
+  color: var(--primary-color);
+  border-left: 4px solid var(--primary-color);
 }
 
 .popular-courses-structured-catalog h2::before {
@@ -497,9 +497,9 @@
 
 /* Recommended Courses Title */
 .recommended-courses-structured-catalog h2 {
-  background: linear-gradient(135deg, #4ecdc420, #4ecdc410);
-  color: #4ecdc4;
-  border-left: 4px solid #4ecdc4;
+  background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.2), rgba(var(--primary-color-rgb), 0.1));
+  color: var(--primary-color);
+  border-left: 4px solid var(--primary-color);
 }
 
 .recommended-courses-structured-catalog h2::before {

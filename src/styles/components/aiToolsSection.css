@@ -51,7 +51,7 @@
   font-size: 2.5rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  background: rgba(110, 237, 200, 0.1);
+  background: rgba(var(--primary-color-rgb), 0.1);
   width: 80px;
   height: 80px;
   display: flex;
@@ -89,7 +89,7 @@
 .capability-item {
   padding: 0.75rem 1rem;
   margin-bottom: 0.5rem;
-  background: rgba(110, 237, 200, 0.1);
+  background: rgba(var(--primary-color-rgb), 0.1);
   border-radius: 6px;
   color: var(--secondary-color);
   transition: transform 0.3s ease;
@@ -97,7 +97,7 @@
 
 .capability-item:hover {
   transform: translateX(5px);
-  background: rgba(110, 237, 200, 0.2);
+  background: rgba(var(--primary-color-rgb), 0.2);
 }
 
 @media (max-width: 1200px) {

@@ -26,7 +26,7 @@
 
 .cursor-engineering-animation.clicking {
   transform: scale(10);
-  background: #6eedc8;
+  background: var(--primary-color);
   transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -45,7 +45,7 @@
 
 .cursor-engineering-animation.clicking::before {
   transform: scale(10);
-  background: #045d46;
+  background: var(--primary-color-dark);
   transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -83,13 +83,13 @@
 }
 
 .study-plan-item-engineering-animation {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--background-light) 100%);
   padding: 0.8rem;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(110, 237, 200, 0.3);
-  box-shadow: 0 2px 4px rgba(110, 237, 200, 0.1);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+  box-shadow: 0 2px 4px rgba(var(--primary-color-rgb), 0.1);
 }
 
 .study-plan-item-engineering-animation h3 {
@@ -545,19 +545,19 @@
 }
 
 .run-code-btn-engineering-animation {
-  background: white;
-  border: 1px solid rgba(110, 237, 200, 0.5);
+  background: var(--white);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.5);
   color: var(--secondary-color);
 }
 
 .run-code-btn-engineering-animation:hover {
-  background: rgba(110, 237, 200, 0.1);
+  background: rgba(var(--primary-color-rgb), 0.1);
 }
 
 .submit-code-btn-engineering-animation {
   background: var(--gradient-primary);
   border: none;
-  color: white;
+  color: var(--white);
 }
 
 .submit-code-btn-engineering-animation:hover {
@@ -578,7 +578,7 @@
 
 .problem-description-engineering-animation::-webkit-scrollbar-thumb,
 .editor-content-engineering-animation::-webkit-scrollbar-thumb {
-  background-color: rgba(110, 237, 200, 0.5);
+  background-color: rgba(var(--primary-color-rgb), 0.5);
   border-radius: 3px;
 }
 
