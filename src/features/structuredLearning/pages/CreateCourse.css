@@ -653,10 +653,9 @@
 }
 
 .custom-preference-structured-create-course input:focus {
-  border-color: #3b82f6;
   background-color: #fff;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 3px rgba(110, 237, 200, 0.1);
 }
 
 .custom-preference-structured-create-course input::placeholder {
