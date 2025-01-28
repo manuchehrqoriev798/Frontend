@@ -42,8 +42,7 @@ const CreateCourse = () => {
     
     // Course Requirements
     prerequisites: [
-      // Each prerequisite will have a structure like:
-      // { subject: '', proficiency: 'dont-know' }
+      { subject: '', proficiency: 'dont-know' }
     ],
     
     // Learning Preferences
@@ -339,36 +338,54 @@ const CreateCourse = () => {
                   <button 
                     type="button" 
                     onClick={addPrerequisite}
-                    className="add-button-structured-create-course"
+                    className="add-prerequisite-button-structured-create-course"
                   >
+                    <span className="button-icon">+</span>
                     Add Prerequisite
                   </button>
+                  
                   {courseData.prerequisites.map((prereq, index) => (
-                    <div key={index} className="prerequisite-item-structured-create-course">
-                      <input
-                        type="text"
-                        value={prereq.subject}
-                        onChange={e => updatePrerequisite(index, 'subject', e.target.value)}
-                        placeholder="e.g., JavaScript Basics"
-                        className="prerequisite-input-structured-create-course"
-                      />
-                      <select
-                        value={prereq.proficiency}
-                        onChange={e => updatePrerequisite(index, 'proficiency', e.target.value)}
-                        className="proficiency-select-structured-create-course"
-                      >
-                        <option value="dont-know">I don't know</option>
-                        <option value="beginner">I know a little bit</option>
-                        <option value="intermediate">I know and have practiced</option>
-                        <option value="expert">I am expert</option>
-                      </select>
-                      <button 
-                        type="button" 
-                        onClick={() => removePrerequisite(index)}
-                        className="remove-button-structured-create-course"
-                      >
-                        Remove
-                      </button>
+                    <div key={index} className="prerequisite-card-structured-create-course">
+                      <div className="prerequisite-content-structured-create-course">
+                        <div className="prerequisite-row-structured-create-course">
+                          <input
+                            type="text"
+                            value={prereq.subject}
+                            onChange={e => updatePrerequisite(index, 'subject', e.target.value)}
+                            placeholder="Enter prerequisite knowledge"
+                            className="prerequisite-input-structured-create-course"
+                          />
+                          
+                          <div className="proficiency-buttons-structured-create-course">
+                            {[
+                              { value: 'dont-know', label: 'Novice' },
+                              { value: 'beginner', label: 'Beginner' },
+                              { value: 'intermediate', label: 'Intermediate' },
+                              { value: 'expert', label: 'Expert' }
+                            ].map(level => (
+                              <button
+                                key={level.value}
+                                type="button"
+                                className={`proficiency-button-structured-create-course ${
+                                  prereq.proficiency === level.value ? 'active' : ''
+                                }`}
+                                onClick={() => updatePrerequisite(index, 'proficiency', level.value)}
+                              >
+                                {level.label}
+                              </button>
+                            ))}
+                          </div>
+
+                          <button 
+                            type="button" 
+                            onClick={() => removePrerequisite(index)}
+                            className="remove-prerequisite-button-structured-create-course"
+                            aria-label="Remove prerequisite"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>

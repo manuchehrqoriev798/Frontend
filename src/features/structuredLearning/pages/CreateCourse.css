@@ -265,20 +265,111 @@
   gap: 1rem;
 }
 
-.prerequisite-item-structured-create-course {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 1rem;
+.add-prerequisite-button-structured-create-course {
+  display: flex;
   align-items: center;
-  padding: 1.25rem;
-  background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
-  border-radius: 12px;
-  transition: all 0.2s ease;
-  border: 1px solid rgb(43, 72, 111);
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(110, 237, 200, 0.1), rgba(43, 72, 111, 0.05));
+  border: 2px dashed rgba(110, 237, 200, 0.5);
+  border-radius: 8px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
 }
 
-.prerequisite-item-structured-create-course:hover {
-  background-color: #f1f5f9;
+.add-prerequisite-button-structured-create-course:hover {
+  background: linear-gradient(135deg, rgba(110, 237, 200, 0.2), rgba(43, 72, 111, 0.1));
+}
+
+.prerequisite-card-structured-create-course {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid rgba(110, 237, 200, 0.2);
+  overflow: hidden;
+}
+
+.prerequisite-row-structured-create-course {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+}
+
+.prerequisite-input-structured-create-course {
+  flex: 2;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(110, 237, 200, 0.3);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.prerequisite-input-structured-create-course:focus {
+  border-color: rgb(110, 237, 200);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(110, 237, 200, 0.1);
+}
+
+.proficiency-buttons-structured-create-course {
+  display: flex;
+  gap: 0.5rem;
+  flex: 3;
+}
+
+.proficiency-button-structured-create-course {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid rgba(110, 237, 200, 0.3);
+  border-radius: 6px;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.proficiency-button-structured-create-course:hover {
+  background: rgba(110, 237, 200, 0.1);
+}
+
+.proficiency-button-structured-create-course.active {
+  background: rgb(110, 237, 200);
+  color: white;
+  border-color: rgb(110, 237, 200);
+}
+
+.remove-prerequisite-button-structured-create-course {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.remove-prerequisite-button-structured-create-course:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+@media (max-width: 768px) {
+  .prerequisite-row-structured-create-course {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .proficiency-buttons-structured-create-course {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .prerequisite-input-structured-create-course {
+    width: 100%;
+  }
 }
 
 /* Resource Integration */
