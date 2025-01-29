@@ -442,6 +442,8 @@
   background: rgba(110, 237, 200, 0.1);
   color: var(--secondary-color);
   transition: all 0.3s ease;
+  min-width: 70px;
+  text-align: center;
 }
 
 .difficulty-level-engineering-animation.completed {

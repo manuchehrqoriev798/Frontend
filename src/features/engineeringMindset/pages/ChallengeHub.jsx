@@ -9,19 +9,20 @@ const ChallengeHub = () => {
   const [showPopularCourses, setShowPopularCourses] = useState(true);
   const [likeRatioFilter, setLikeRatioFilter] = useState('');
 
-  const categories = [
-    { id: 'all', name: 'All Challenges' },
-    { id: 'algorithms', name: 'Algorithms' },
-    { id: 'data-structures', name: 'Data Structures' },
-    { id: 'system-design', name: 'System Design' },
-    { id: 'optimization', name: 'Optimization' }
+  const subjects = [
+    { id: 'all', name: 'All Subjects' },
+    { id: 'coding', name: 'Coding' },
+    { id: 'math', name: 'Mathematics' },
+    { id: 'physics', name: 'Physics' },
+    { id: 'chemistry', name: 'Chemistry' },
+    { id: 'biology', name: 'Biology' }
   ];
 
   const challenges = [
     {
-      id: 1,
-      title: 'OptimizeDroneDelivery',
-      category: 'optimization',
+      id: 'C1',
+      title: 'Optimize Drone Delivery',
+      subject: 'coding',
       difficulty: 'Hard',
       points: 100,
       completions: 245,
@@ -32,121 +33,56 @@ const ChallengeHub = () => {
       dislikes: 45
     },
     {
-      id: 2,
-      title: 'LoadBalancer_Design',
-      category: 'system-design',
+      id: 'M2',
+      title: 'Linear Equation Systems',
+      subject: 'math',
       difficulty: 'Medium',
       points: 75,
       completions: 412,
       acceptanceRate: 50.0,
-      companies: ['Microsoft', 'Google', 'Netflix'],
-      tags: ['System Design', 'Networks'],
+      companies: ['Research Labs', 'Engineering Firms'],
+      tags: ['Linear Algebra', 'Matrices'],
       likes: 256,
       dislikes: 32
     },
     {
-      id: 3,
-      title: 'BinaryTreeTraversal',
-      category: 'data-structures',
-      difficulty: 'Easy',
-      points: 50,
-      completions: 823,
-      acceptanceRate: 60.0,
-      companies: ['Amazon', 'Meta', 'Apple'],
-      tags: ['Trees', 'Recursion'],
+      id: 'PH3',
+      title: 'Projectile Motion Analysis',
+      subject: 'physics',
+      difficulty: 'Hard',
+      points: 90,
+      completions: 156,
+      acceptanceRate: 30.0,
+      companies: ['NASA', 'SpaceX', 'Boeing'],
+      tags: ['Mechanics', 'Kinematics'],
       likes: 189,
       dislikes: 23
     },
     {
-      id: 4,
-      title: 'Database_Sharding',
-      category: 'system-design',
-      difficulty: 'Hard',
-      points: 120,
-      completions: 156,
-      acceptanceRate: 30.0,
-      companies: ['MongoDB', 'Oracle', 'Microsoft'],
-      tags: ['Databases', 'Scalability'],
-      likes: 102,
-      dislikes: 15
-    },
-    {
-      id: 5,
-      title: 'CacheImplementation',
-      category: 'optimization',
+      id: 'CH4',
+      title: 'Reaction Equilibrium',
+      subject: 'chemistry',
       difficulty: 'Medium',
       points: 85,
       completions: 334,
       acceptanceRate: 70.0,
-      companies: ['Redis', 'Amazon', 'Microsoft'],
-      tags: ['Cache', 'Data Structures'],
+      companies: ['Pharmaceutical', 'Research Labs'],
+      tags: ['Chemical Equilibrium', 'Thermodynamics'],
       likes: 287,
       dislikes: 37
     },
     {
-      id: 6,
-      title: 'Microservices_Architecture',
-      category: 'system-design',
-      difficulty: 'Hard',
-      points: 110,
-      completions: 189,
-      acceptanceRate: 20.0,
-      companies: ['Netflix', 'Uber', 'Amazon'],
-      tags: ['Microservices', 'System Design', 'API'],
-      likes: 156,
-      dislikes: 20
-    },
-    {
-      id: 7,
-      title: 'DynamicProgrammingMastery',
-      category: 'algorithms',
-      difficulty: 'Medium',
-      points: 90,
-      completions: 445,
-      acceptanceRate: 50.0,
-      companies: ['Google', 'Meta', 'Microsoft'],
-      tags: ['DP', 'Optimization'],
-      likes: 300,
-      dislikes: 40
-    },
-    {
-      id: 8,
-      title: 'Graph_Algorithms',
-      category: 'algorithms',
+      id: 'B5',
+      title: 'Gene Expression Analysis',
+      subject: 'biology',
       difficulty: 'Hard',
       points: 95,
-      completions: 267,
-      acceptanceRate: 30.0,
-      companies: ['Google', 'Amazon', 'Uber'],
-      tags: ['Graphs', 'DFS', 'BFS'],
-      likes: 198,
-      dislikes: 27
-    },
-    {
-      id: 9,
-      title: 'RedisImplementation',
-      category: 'system-design',
-      difficulty: 'Medium',
-      points: 80,
-      completions: 312,
-      acceptanceRate: 60.0,
-      companies: ['Redis', 'Amazon', 'Microsoft'],
-      tags: ['Caching', 'In-Memory DB'],
-      likes: 245,
-      dislikes: 35
-    },
-    {
-      id: 10,
-      title: 'SortingAlgorithms',
-      category: 'algorithms',
-      difficulty: 'Easy',
-      points: 60,
-      completions: 934,
-      acceptanceRate: 80.0,
-      companies: ['Google', 'Meta', 'Apple'],
-      tags: ['Sorting', 'Arrays'],
-      likes: 789,
-      dislikes: 95
+      completions: 189,
+      acceptanceRate: 20.0,
+      companies: ['Biotech', 'Research Institutes'],
+      tags: ['Genetics', 'Molecular Biology'],
+      likes: 156,
+      dislikes: 20
     }
   ];
 
@@ -308,19 +244,9 @@ const ChallengeHub = () => {
               </div>
               <div className="filter-group-engineering-challenge">
                 <select className="filter-select-engineering-challenge">
-                  <option value="">Category</option>
-                  <option value="arrays">Arrays</option>
-                  <option value="strings">Strings</option>
-                  <option value="linked-lists">Linked Lists</option>
-                  <option value="trees">Trees</option>
-                  <option value="graphs">Graphs</option>
-                </select>
-              </div>
-              <div className="filter-group-engineering-challenge">
-                <select className="filter-select-engineering-challenge">
-                  <option value="">Topic</option>
-                  {categories.map(cat => (
-                    <option key={cat.id} value={cat.id}>{cat.name}</option>
+                  <option value="">Subject</option>
+                  {subjects.map(subject => (
+                    <option key={subject.id} value={subject.id}>{subject.name}</option>
                   ))}
                 </select>
               </div>
@@ -382,7 +308,7 @@ const ChallengeHub = () => {
                   <div key={challenge.id} className="challenge-card-engineering-challenge">
                     <div className="challenge-main-content-engineering-challenge">
                       <h3>
-                        <span className="challenge-number-engineering-challenge">#{challenge.id}.</span>
+                        <span className="challenge-number-engineering-challenge">{challenge.id}.</span>
                         {challenge.title}
                       </h3>
                       <div className="challenge-tags-engineering-challenge">

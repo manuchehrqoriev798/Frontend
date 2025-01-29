@@ -322,11 +322,9 @@ const EngineeringMindsetAnimation = () => {
         <div className="problem-description-engineering-animation">
           <h2>Drone Delivery System</h2>
           <div className="difficulty-levels-engineering-animation">
-            <div className="difficulty-level-engineering-animation completed">Level 1</div>
-            <div className="difficulty-level-engineering-animation active">Level 2</div>
-            <div className="difficulty-level-engineering-animation">Level 3</div>
-            <div className="difficulty-level-engineering-animation">Level 4</div>
-            <div className="difficulty-level-engineering-animation">Level 5</div>
+            <div className="difficulty-level-engineering-animation completed">Easy</div>
+            <div className="difficulty-level-engineering-animation active">Medium</div>
+            <div className="difficulty-level-engineering-animation">Hard</div>
           </div>
           
           <div className="problem-content-engineering-animation">
