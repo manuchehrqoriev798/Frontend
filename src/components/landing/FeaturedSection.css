@@ -1,23 +1,18 @@
 .feature-panels-section {
+  padding: 4rem 0;
+  background: transparent;
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.content-wrapper {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
 }
 
 .feature-panels-grid {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,6 +26,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Feature Panels - Base Layout */
+.feature-panels-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 3rem;
@@ -40,10 +56,12 @@
   background: var(--white);
   border-radius: 12px;
   padding: 2rem;
+  box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   width: 100%;
   overflow: hidden;
+  margin: 0;
 }
 
 .feature-panel:hover {
@@ -335,7 +353,7 @@
 
 /* Feature Panels Section */
 .feature-panels-section {
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 /* Keep panel content left-aligned */
@@ -463,13 +481,25 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .content-wrapper {
-    padding: 3rem 2rem;
+  .feature-panels-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .feature-panels-grid {
+    width: 85%;
+    max-width: 900px;
+    gap: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .content-wrapper {
+  .feature-panels-section {
     padding: 2rem 1rem;
+  }
+  
+  .feature-panels-grid {
+    width: 80%;
+    max-width: 100%;
+    gap: 2.5rem;
   }
 }

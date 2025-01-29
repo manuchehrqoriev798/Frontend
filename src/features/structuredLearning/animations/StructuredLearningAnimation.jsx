@@ -145,7 +145,7 @@ const StructuredLearningAnimation = () => {
 
         // Move to and click the course card
         cursor.style.transform = 'translate(280px, 480px)';
-        await wait(1000);
+        await wait(500);
         cursor.classList.add('clicking');
         await wait(500);
         cursor.classList.remove('clicking');
