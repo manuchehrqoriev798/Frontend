@@ -2,7 +2,7 @@ import React from 'react';
 import StructuredCoursePanel from '../../features/structuredLearning/StructuredCoursePanel';
 import EngineeringMindsetPanel from '../../features/engineeringMindset/EngineeringMindsetPanel';
 import StartupCoursePanel from '../../features/startupSimulation/StartupCoursePanel';
-import '../../styles/components/featuredSection.css';
+import './FeaturedSection.css';
 
 const FeaturedSection = () => {
   return (

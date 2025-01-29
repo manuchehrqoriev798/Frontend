@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaTwitter, FaLinkedin, FaDiscord, FaYoutube } from 'react-icons/fa';
 import quadLogo from '../../assets/images/quad.png';
-import '../../styles/components/footer.css';
+import './Footer.css';
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {

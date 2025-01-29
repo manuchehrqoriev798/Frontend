@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/components/aiToolsSection.css';
+import './AIToolsSection.css';
 import { FaRobot, FaCode, FaTools } from 'react-icons/fa';
 
 const AIToolsSection = () => {

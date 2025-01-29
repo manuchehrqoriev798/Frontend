@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaCheck, FaInfoCircle, FaTimes } from 'react-icons/fa';
-import '../../styles/components/pricingSection.css';
+import './PricingSection.css';
 
 const PricingSection = () => {
   const [showComparison, setShowComparison] = useState(false);

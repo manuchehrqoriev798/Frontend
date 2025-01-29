@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import quadLogo from '../../assets/images/quad.png';
 import { FaGlobe, FaMoon, FaSun, FaChevronDown } from 'react-icons/fa';
+import './NavbarHome.css';
 
 const NavbarHome = () => {
   const navigate = useNavigate();

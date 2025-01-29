@@ -25,7 +25,7 @@
   transition: all 0.3s ease;
   position: relative;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(var(--white), 0.2);
+  border: 1px solid var(--secondary-color);
 }
 
 .pricing-card:hover {

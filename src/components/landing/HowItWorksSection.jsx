@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/components/howItWorks.css';
+import './HowItWorks.css';
 
 const HowItWorksSection = () => {
   return (
     <section className="how-it-works-section">
-      <div className="content-wrapper">
+      <div className="content-wrapper-how-it-works">
         <h2 className="section-title">WHERE DO YOU WANT TO GO?</h2>
         
         <div className="journey-tree">

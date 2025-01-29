@@ -11,16 +11,11 @@ import JoinContests from './features/engineeringMindset/pages/JoinContests';
 import ParticleBackground from './components/common/ParticleBackground';
 import './styles/variables.css';
 import './styles/components/buttons.css';
-import './styles/components/featurePanels.css';
 import './styles/components/sectionTitle.css';
-import './styles/components/navbarDashboard.css';
-import './styles/components/navbarHome.css';
 import './styles/components/particles.css';
-import './styles/components/heroSection.css';
 import './styles/global.css';
 import './styles/theme.css';
 import './styles/components/cards.css';
-import './styles/components/footer.css';
 
 function App() {
   return (

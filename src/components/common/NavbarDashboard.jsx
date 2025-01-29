@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaGlobe, FaMoon, FaSun, FaChevronDown } from 'react-icons/fa';
 import quadLogo from '../../assets/images/quad.png';
+import './NavbarDashboard.css';
 
 const NavbarDashboard = () => {
   const location = useLocation();
