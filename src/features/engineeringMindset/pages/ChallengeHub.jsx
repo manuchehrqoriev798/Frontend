@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import NavbarDashboard from '../../../components/common/NavbarDashboard';
 import Footer from '../../../components/common/Footer';
 import './ChallengeHub.css';
+import { useNavigate } from 'react-router-dom';
 
 const ChallengeHub = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showPopularCourses, setShowPopularCourses] = useState(true);
@@ -31,6 +33,19 @@ const ChallengeHub = () => {
       tags: ['Algorithms', 'Graph Theory'],
       likes: 324,
       dislikes: 45
+    },
+    {
+      id: 'C2',
+      title: 'Smart Traffic System',
+      subject: 'coding',
+      difficulty: 'Medium',
+      points: 85,
+      completions: 312,
+      acceptanceRate: 62.5,
+      companies: ['Tesla', 'Waymo', 'BMW'],
+      tags: ['Dynamic Programming', 'Real-time Systems'],
+      likes: 287,
+      dislikes: 32
     },
     {
       id: 'M2',
@@ -149,6 +164,10 @@ const ChallengeHub = () => {
 
     return matchesSearch && matchesLikeRatio;
   });
+
+  const handleProblemClick = (challengeId) => {
+    navigate(`/challenge-coding/${challengeId}`);
+  };
 
   return (
     <div className="challenge-hub-container-engineering-challenge">
@@ -344,7 +363,12 @@ const ChallengeHub = () => {
                           </span>
                         </div>
                       </div>
-                      <button className="solve-btn-engineering-challenge">Solve</button>
+                      <button 
+                        className="solve-btn-engineering-challenge"
+                        onClick={() => handleProblemClick(challenge.id)}
+                      >
+                        Solve
+                      </button>
                     </div>
                   </div>
                 );

@@ -8,6 +8,7 @@ import CreateStartup from './features/startupSimulation/pages/CreateStartup';
 import StartupHub from './features/startupSimulation/pages/StartupHub';
 import ChallengeHub from './features/engineeringMindset/pages/ChallengeHub';
 import JoinContests from './features/engineeringMindset/pages/JoinContests';
+import ChallengeCoding from './features/engineeringMindset/pages/challengeCoding/ChallengeCoding';
 import ParticleBackground from './components/common/ParticleBackground';
 import './styles/variables.css';
 import './styles/components/buttons.css';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/startup-hub" element={<StartupHub />} />
             <Route path="/challenge-hub" element={<ChallengeHub />} />
             <Route path="/join-contests" element={<JoinContests />} />
+            <Route path="/challenge-coding/:challengeId" element={<ChallengeCoding />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
