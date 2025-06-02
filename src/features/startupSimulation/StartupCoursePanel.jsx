@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import StartupSimulationAnimation from './animations/StartupSimulationAnimation';
+import { FiTarget } from 'react-icons/fi';
 
 const StartupCoursePanel = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const StartupCoursePanel = () => {
       <div className="feature-content">
         <div className="feature-content-left">
           <div className="feature-header">
-            <div className="feature-icon">🚀</div>
+            <div className="feature-icon"><FiTarget /></div>
             <h2 className="feature-title">Startup Simulation</h2>
             <p className="feature-description">Experience the journey of building a startup in a risk-free environment</p>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiTarget, FiBookOpen, FiTool, FiZap } from 'react-icons/fi';
 import './HowItWorks.css';
 
 const HowItWorksSection = () => {
@@ -10,13 +11,13 @@ const HowItWorksSection = () => {
         
         <div className="journey-tree">
           <div className="tree-node main-goal">
-            <span className="node-icon">🎯</span>
+            <span className="node-icon"><FiTarget className="icon-svg" /></span>
           </div>
           
           <div className="tree-branches">
             <div className="path-option">
               <div className="tree-node">
-                <span className="node-icon">🎓</span>
+                <span className="node-icon"><FiBookOpen className="icon-svg" /></span>
                 <span className="node-title">LEARN</span>
               </div>
               <div className="path-details">
@@ -27,7 +28,7 @@ const HowItWorksSection = () => {
 
             <div className="path-option">
               <div className="tree-node">
-                <span className="node-icon">🛠️</span>
+                <span className="node-icon"><FiTool className="icon-svg" /></span>
                 <span className="node-title">PRACTICE</span>
               </div>
               <div className="path-details">
@@ -38,7 +39,7 @@ const HowItWorksSection = () => {
 
             <div className="path-option">
               <div className="tree-node">
-                <span className="node-icon">🚀</span>
+                <span className="node-icon"><FiZap className="icon-svg" /></span>
                 <span className="node-title">CREATE</span>
               </div>
               <div className="path-details">
