@@ -33,7 +33,7 @@ const DisclaimerModal = () => {
 
   // Actual contact information
   const contactInfo = {
-    email: "manuchehrqoriev798@gmail.com",
+    email: "contactquadfounders@gmail.com",
     telegram: "manuchehr0",
     whatsapp: "992928481064",
     instagramAmirbek: "amirbek.islomov"
