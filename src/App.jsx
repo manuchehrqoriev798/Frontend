@@ -10,6 +10,7 @@ import ChallengeHub from './features/engineeringMindset/pages/ChallengeHub';
 import JoinContests from './features/engineeringMindset/pages/JoinContests';
 import ChallengeCoding from './features/engineeringMindset/pages/challengeCoding/ChallengeCoding';
 import ParticleBackground from './components/common/ParticleBackground';
+import DisclaimerModal from './components/common/DisclaimerModal';
 import './styles/variables.css';
 import './styles/components/buttons.css';
 import './styles/components/sectionTitle.css';
@@ -23,6 +24,7 @@ function App() {
     <Router>
       <div className="app">
         <ParticleBackground />
+        <DisclaimerModal />
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
