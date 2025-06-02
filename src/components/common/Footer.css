@@ -19,7 +19,7 @@
 /* Main Footer Content */
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   gap: 4rem;
   margin-bottom: 3rem;
 }
@@ -64,7 +64,25 @@
   color: var(--primary-color);
 }
 
+/* Right Column */
+.footer-right-column {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+/* Quick Links and Creators Layout */
+.footer-links, .footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Quick Links */
+.footer-links {
+  flex: 1;
+}
+
 .footer-links h3,
 .footer-contact h3 {
   color: var(--secondary-color);
@@ -93,6 +111,10 @@
 }
 
 /* Contact Information */
+.footer-contact {
+  flex: 2;
+}
+
 .footer-contact ul {
   list-style: none;
   padding: 0;
@@ -120,6 +142,49 @@
 
 .footer-contact address {
   font-style: normal;
+}
+
+/* Creator Information */
+.creators-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.creator {
+  margin-bottom: 0.5rem;
+  flex: 1;
+}
+
+.creator strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.creator-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.creator-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.creator-links a:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.creator-links a svg {
+  font-size: 1.2rem;
 }
 
 /* Footer Bottom */
@@ -157,13 +222,29 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .footer-content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
   }
   
   .footer-brand-section {
-    grid-column: 1 / -1;
     max-width: none;
+  }
+  
+  .footer-right-column {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-right-column {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .creators-container {
+    flex-direction: row;
+    gap: 2rem;
   }
 }
 
@@ -177,8 +258,17 @@
   }
 
   .footer-content {
-    grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .footer-right-column {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .creators-container {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .footer-bottom {

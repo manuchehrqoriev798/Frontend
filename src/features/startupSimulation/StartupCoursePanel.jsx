@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import StartupSimulationAnimation from './animations/StartupSimulationAnimation';
-import { FiTarget } from 'react-icons/fi';
+import { FiTarget, FiUsers } from 'react-icons/fi';
 
 const StartupCoursePanel = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const StartupCoursePanel = () => {
       <div className="feature-content">
         <div className="feature-content-left">
           <div className="feature-header">
-            <div className="feature-icon"><FiTarget /></div>
+            <div className="feature-icon">🚀</div>
             <h2 className="feature-title">Startup Simulation</h2>
             <p className="feature-description">Experience the journey of building a startup in a risk-free environment</p>
           </div>
@@ -51,11 +51,11 @@ const StartupCoursePanel = () => {
 
           <div className="feature-buttons">
             <button className="primary-btn" onClick={handleStartStartup}>
-              <span className="btn-icon">🎯</span>
+              <FiTarget className="btn-icon" />
               <span className="btn-text">Start Startup</span>
             </button>
             <button className="secondary-btn" onClick={handleJoinStartup}>
-              <span className="btn-icon">🤝</span>
+              <FiUsers className="btn-icon" />
               <span className="btn-text">Join Startup</span>
             </button>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaTwitter, FaLinkedin, FaDiscord, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaLinkedin, FaDiscord, FaYoutube, FaInstagram, FaTelegram } from 'react-icons/fa';
 import quadLogo from '../../assets/images/quad.png';
 import './Footer.css';
 
@@ -46,35 +46,60 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a></li>
-              <li><a href="#how-it-works" onClick={(e) => { e.preventDefault(); scrollToSection('how-it-works'); }}>How it works</a></li>
-              <li><a href="#features" onClick={(e) => { e.preventDefault(); scrollToSection('features'); }}>Key features</a></li>
-              <li><a href="#ai-tools" onClick={(e) => { e.preventDefault(); scrollToSection('ai-tools'); }}>AI-Powered Learning Tools</a></li>
-              <li><a href="#pricing" onClick={(e) => { e.preventDefault(); scrollToSection('pricing'); }}>Pricing</a></li>
-            </ul>
-          </div>
+          {/* Right Column: Quick Links and Creators */}
+          <div className="footer-right-column">
+            {/* Quick Links */}
+            <div className="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a></li>
+                <li><a href="#how-it-works" onClick={(e) => { e.preventDefault(); scrollToSection('how-it-works'); }}>How it works</a></li>
+                <li><a href="#features" onClick={(e) => { e.preventDefault(); scrollToSection('features'); }}>Key features</a></li>
+                <li><a href="#ai-tools" onClick={(e) => { e.preventDefault(); scrollToSection('ai-tools'); }}>AI-Powered Learning Tools</a></li>
+                <li><a href="#pricing" onClick={(e) => { e.preventDefault(); scrollToSection('pricing'); }}>Pricing</a></li>
+              </ul>
+            </div>
 
-          {/* Contact Information */}
-          <div className="footer-contact">
-            <h3>Contact Us</h3>
-            <ul>
-              <li>
-                <strong>Email:</strong>
-                <a href="mailto:info@quadplatform.com">info@quadplatform.com</a>
-              </li>
-              <li>
-                <strong>Phone:</strong>
-                <a href="tel:+15551234567">+1 (555) 123-4567</a>
-              </li>
-              <li>
-                <strong>Address:</strong>
-                <address>123 Tech Street, Silicon Valley, CA 94025</address>
-              </li>
-            </ul>
+            {/* Contact Information */}
+            <div className="footer-contact">
+              <h3>Created by</h3>
+              <div className="creators-container">
+                <div className="creator">
+                  <strong>Amirbek Islomov</strong>
+                  <div className="creator-links">
+                    <a href="https://github.com/AmirbekAI" target="_blank" rel="noopener noreferrer">
+                      <FaGithub /> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/amirbek.islomov/" target="_blank" rel="noopener noreferrer">
+                      <FaInstagram /> Instagram
+                    </a>
+                    <a href="https://t.me/amirbek_islomov" target="_blank" rel="noopener noreferrer">
+                      <FaTelegram /> Telegram
+                    </a>
+                    <a href="mailto:amirbek.islomov_2027@ucentralasia.org">
+                      amirbek.islomov_2027@ucentralasia.org
+                    </a>
+                  </div>
+                </div>
+                <div className="creator">
+                  <strong>Manuchehr Qoriev</strong>
+                  <div className="creator-links">
+                    <a href="https://github.com/manuchehrqoriev798" target="_blank" rel="noopener noreferrer">
+                      <FaGithub /> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/manuchehr_qoriev/" target="_blank" rel="noopener noreferrer">
+                      <FaInstagram /> Instagram
+                    </a>
+                    <a href="https://t.me/manuchehr_qoriev" target="_blank" rel="noopener noreferrer">
+                      <FaTelegram /> Telegram
+                    </a>
+                    <a href="mailto:manuchehrqoriev798@gmail.com">
+                      manuchehrqoriev798@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

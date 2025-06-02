@@ -1,6 +1,7 @@
 import React from 'react';
 import StructuredLearningAnimation from './animations/StructuredLearningAnimation';
 import { useNavigate } from 'react-router-dom';
+import { FiBookOpen, FiSearch } from 'react-icons/fi';
 
 const StructuredCoursePanel = () => {
   const navigate = useNavigate();
@@ -50,11 +51,11 @@ const StructuredCoursePanel = () => {
 
           <div className="feature-buttons">
             <button className="primary-btn" onClick={handleCreateCourse}>
-              <span className="btn-icon">📚</span>
+              <FiBookOpen className="btn-icon" />
               <span className="btn-text">Create Course</span>
             </button>
             <button className="secondary-btn" onClick={handleViewCourses}>
-              <span className="btn-icon">🔍</span>
+              <FiSearch className="btn-icon" />
               <span className="btn-text">View Courses</span>
             </button>
           </div>

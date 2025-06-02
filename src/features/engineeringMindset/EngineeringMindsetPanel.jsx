@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import EngineeringMindsetAnimation from './animations/EngineeringMindsetAnimation';
+import { FiCode, FiAward } from 'react-icons/fi';
 
 const EngineeringMindsetPanel = () => {
   const navigate = useNavigate();
@@ -50,11 +51,11 @@ const EngineeringMindsetPanel = () => {
 
           <div className="feature-buttons">
             <button className="primary-btn" onClick={handleSolveChallenge}>
-              <span className="btn-icon">🎯</span>
+              <FiCode className="btn-icon" />
               <span className="btn-text">Solve Challenge</span>
             </button>
             <button className="secondary-btn" onClick={handleJoinContests}>
-              <span className="btn-icon">🏆</span>
+              <FiAward className="btn-icon" />
               <span className="btn-text">Join Contests</span>
             </button>
           </div>
