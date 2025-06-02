@@ -136,7 +136,7 @@ const DisclaimerModal = () => {
                   <FaInstagram />
                 </div>
                 <div className="contact-info">
-                  <h4>Instagram (Amirbek)</h4>
+                  <h4>Instagram </h4>
                   <p>@{contactInfo.instagramAmirbek}</p>
                   <div className="hover-hint">
                     <FaQrcode /> <span>Hover for QR</span>
