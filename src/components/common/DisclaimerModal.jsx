@@ -49,7 +49,7 @@ const DisclaimerModal = () => {
     <div className="disclaimer-modal-overlay">
       <div className="disclaimer-modal">
         <div className="disclaimer-header">
-          <h2>Welcome to Our Demo</h2>
+          <h2>Welcome to Demo Version of Quad Educational Platform</h2>
           <button className="close-button" onClick={handleClose}>
             <FaTimes />
           </button>
@@ -154,7 +154,7 @@ const DisclaimerModal = () => {
         </div>
         <div className="disclaimer-footer">
           <button className="primary-button" onClick={handleClose}>
-            Proceed to Demo
+            Explore Quad Platform
           </button>
         </div>
       </div>
