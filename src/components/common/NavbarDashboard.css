@@ -20,6 +20,7 @@
 .nav-left .logo {
   display: flex;
   align-items: center;
+  margin-right: 2.5rem;
 }
 
 .logo-icon {
@@ -36,11 +37,13 @@
 /* Navigation links */
 .nav-center {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.75rem;
   align-items: center;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .nav-center::-webkit-scrollbar {
@@ -52,7 +55,7 @@
   align-items: center;
   text-decoration: none;
   color: var(--secondary-color);
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.75rem;
   border-radius: 8px;
   transition: all 0.2s ease;
   position: relative;
@@ -95,13 +98,15 @@
 
 .nav-text {
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-family: var(--font-family);
 }
 
 /* Right section */
 .nav-right {
   display: flex;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .nav-button.secondary {
@@ -112,25 +117,30 @@
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
+  font-family: var(--font-family);
 }
 
 .nav-button.secondary:hover {
-  background: rgb(33, 56, 87); /* Slightly darker shade for hover */
+  background: rgb(33, 56, 87);
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .nav-container {
     padding: 0 1rem;
   }
   
   .nav-center {
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
   
   .nav-link {
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .nav-text {
+    font-size: 0.85rem;
   }
 } 

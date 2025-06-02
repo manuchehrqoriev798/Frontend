@@ -544,6 +544,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: var(--font-family);
 }
 
 .run-code-btn-engineering-animation {

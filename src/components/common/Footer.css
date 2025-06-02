@@ -26,13 +26,25 @@
 
 /* Brand Section */
 .footer-brand-section {
-  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+  margin-right: 2rem;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
+  padding: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-logo img {
@@ -44,7 +56,10 @@
   color: var(--secondary-color);
   opacity: 0.8;
   line-height: 1.6;
-  white-space: nowrap;
+  font-family: var(--font-family);
+  margin: 0;
+  max-width: 300px;
+  text-align: center;
 }
 
 /* Social Links */
@@ -68,8 +83,9 @@
 .footer-right-column {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 /* Quick Links and Creators Layout */
@@ -81,13 +97,14 @@
 /* Quick Links */
 .footer-links {
   flex: 1;
+  padding: 0 1rem;
 }
 
-.footer-links h3,
-.footer-contact h3 {
+.footer-links h3 {
   color: var(--secondary-color);
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  font-family: var(--font-family);
 }
 
 .footer-links ul {
@@ -104,6 +121,7 @@
   opacity: 0.8;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  font-family: var(--font-family);
 }
 
 .footer-links ul li a:hover {
@@ -113,6 +131,20 @@
 /* Contact Information */
 .footer-contact {
   flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  margin-left: 2rem;
+}
+
+.footer-contact h3 {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family);
+  text-align: center;
+  width: 100%;
 }
 
 .footer-contact ul {
@@ -148,12 +180,17 @@
 .creators-container {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
+  width: 100%;
+  padding-top: 1rem;
 }
 
 .creator {
   margin-bottom: 0.5rem;
   flex: 1;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .creator strong {
@@ -161,6 +198,7 @@
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: var(--secondary-color);
+  font-family: var(--font-family);
 }
 
 .creator-links {
@@ -176,6 +214,7 @@
   color: var(--secondary-color);
   opacity: 0.8;
   transition: opacity 0.2s ease;
+  font-family: var(--font-family);
 }
 
 .creator-links a:hover {
@@ -190,6 +229,7 @@
 /* Footer Bottom */
 .footer-bottom {
   padding-top: 2rem;
+  margin-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: space-between;
@@ -201,11 +241,14 @@
 .footer-copyright {
   color: var(--secondary-color);
   opacity: 0.8;
+  font-family: var(--font-family);
+  padding: 0.5rem 0;
 }
 
 .footer-legal {
   display: flex;
   gap: 2rem;
+  padding: 0.5rem 0;
 }
 
 .footer-legal a {
@@ -213,6 +256,7 @@
   opacity: 0.8;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  font-family: var(--font-family);
 }
 
 .footer-legal a:hover {
@@ -222,12 +266,13 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .footer-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
   }
   
   .footer-brand-section {
     max-width: none;
+    margin-right: 0;
   }
   
   .footer-right-column {
@@ -237,14 +282,45 @@
 }
 
 @media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer-brand-section {
+    justify-content: center;
+    margin-right: 0;
+    padding: 1rem 0;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .brand-description {
+    text-align: center;
+    max-width: 100%;
+  }
+
   .footer-right-column {
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
+    padding: 1rem 0;
+  }
+  
+  .footer-links, .footer-contact {
+    padding: 1rem 0;
   }
   
   .creators-container {
     flex-direction: row;
     gap: 2rem;
+  }
+  
+  .footer-contact {
+    margin-left: 0;
   }
 }
 
@@ -262,7 +338,6 @@
   }
   
   .footer-right-column {
-    flex-direction: column;
     gap: 1.5rem;
   }
   

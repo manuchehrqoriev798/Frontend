@@ -18,6 +18,7 @@
   text-decoration: none !important;
   font-size: 1rem;
   box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
 /* Login button - using primary color */

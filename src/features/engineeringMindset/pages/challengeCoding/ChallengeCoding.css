@@ -88,7 +88,7 @@
 /* New styles for structured content */
 .problem-content-engineering-coding pre {
   white-space: pre-wrap;
-  font-family: inherit;
+  font-family: var(--font-family);
   line-height: 1.6;
 }
 
@@ -282,6 +282,7 @@
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-family: var(--font-family);
 }
 
 .language-select-engineering-coding:hover {
@@ -327,6 +328,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: var(--font-family);
 }
 
 .run-code-btn-engineering-coding {
@@ -416,6 +418,7 @@
   border-radius: 4px;
   border: 1px solid #ddd;
   font-weight: 500;
+  font-family: var(--font-family);
 }
 
 .difficulty-select.easy {
@@ -569,6 +572,7 @@
   font-size: 0.95rem;
   position: relative;
   background: rgba(var(--secondary-color-rgb), 1);
+  font-family: var(--font-family);
 }
 
 .problem-nav-item:hover {

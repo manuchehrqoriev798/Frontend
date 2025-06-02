@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaTwitter, FaLinkedin, FaDiscord, FaYoutube, FaInstagram, FaTelegram } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaTelegram } from 'react-icons/fa';
 import quadLogo from '../../assets/images/quad.png';
 import './Footer.css';
 
@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Main Footer Content */}
         <div className="footer-content">
-          {/* Brand Section with Social Media */}
+          {/* Brand Section with Logo */}
           <div className="footer-brand-section">
             <div className="footer-brand">
               <Link to="/" className="footer-logo">
@@ -26,23 +26,6 @@ const Footer = () => {
               <p className="brand-description">
                 Empowering learners through AI-driven personalized education
               </p>
-              <div className="social-links">
-                <a href="https://github.com/quadplatform" target="_blank" rel="noopener noreferrer">
-                  <FaGithub />
-                </a>
-                <a href="https://twitter.com/quadplatform" target="_blank" rel="noopener noreferrer">
-                  <FaTwitter />
-                </a>
-                <a href="https://linkedin.com/company/quadplatform" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin />
-                </a>
-                <a href="https://discord.gg/quadplatform" target="_blank" rel="noopener noreferrer">
-                  <FaDiscord />
-                </a>
-                <a href="https://youtube.com/quadplatform" target="_blank" rel="noopener noreferrer">
-                  <FaYoutube />
-                </a>
-              </div>
             </div>
           </div>
 
